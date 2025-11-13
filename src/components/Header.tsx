@@ -45,11 +45,11 @@ export function Header() {
           : 'bg-background/80 backdrop-blur-sm'
       }`}
     >
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between h-24">
+      <div className="container mx-auto px-4 py-2">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="h-20 w-20 rounded-full overflow-hidden transition-all duration-500 group-hover:scale-110">
+            <div className="h-16 w-16 rounded-full overflow-hidden transition-all duration-500 group-hover:scale-110">
               <img
                 src={logoImg}
                 alt="Wyrolowani – logo"
