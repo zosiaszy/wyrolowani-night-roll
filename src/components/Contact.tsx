@@ -3,20 +3,18 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-
 export function Contact() {
-  const { toast } = useToast();
-
+  const {
+    toast
+  } = useToast();
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
       title: "Wiadomość wysłana!",
-      description: "Odpowiemy najszybciej jak to możliwe.",
+      description: "Odpowiemy najszybciej jak to możliwe."
     });
   };
-
-  return (
-    <section id="contact" className="py-24 relative overflow-hidden">
+  return <section id="contact" className="py-24 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-[100px]"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-[100px]"></div>
@@ -45,33 +43,19 @@ export function Contact() {
                   <label htmlFor="name" className="block text-sm font-medium mb-2">
                     Imię i nazwisko
                   </label>
-                  <Input 
-                    id="name" 
-                    placeholder="Jan Kowalski" 
-                    required 
-                  />
+                  <Input id="name" placeholder="Jan Kowalski" required />
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium mb-2">
                     Email
                   </label>
-                  <Input 
-                    id="email" 
-                    type="email" 
-                    placeholder="jan@example.com" 
-                    required 
-                  />
+                  <Input id="email" type="email" placeholder="jan@example.com" required />
                 </div>
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium mb-2">
                     Wiadomość
                   </label>
-                  <Textarea 
-                    id="message" 
-                    placeholder="Twoja wiadomość..."
-                    rows={5}
-                    required 
-                  />
+                  <Textarea id="message" placeholder="Twoja wiadomość..." rows={5} required />
                 </div>
                 <Button type="submit" className="w-full">
                   Wyślij wiadomość
@@ -80,7 +64,9 @@ export function Contact() {
             </div>
 
             {/* Contact Info */}
-            <div className="space-y-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+            <div className="space-y-6 animate-fade-in-up" style={{
+            animationDelay: '0.1s'
+          }}>
               <div className="bg-card/50 backdrop-blur-sm border-2 border-border rounded-xl p-8 space-y-4 shadow-[var(--shadow-card)] ring-1 ring-secondary/30">
                 <h3 className="text-2xl font-semibold flex items-center">
                   <Mail className="mr-2 h-6 w-6 text-secondary" />
@@ -91,8 +77,8 @@ export function Contact() {
                     <span className="font-medium text-foreground mr-2">Email:</span>
                     kontakt@wyrolowani.pl
                   </p>
-                  <p className="flex items-center">
-                    <span className="font-medium text-foreground mr-2">Lokalizacja:</span>
+                  <p className="flex items-center">Lokalizacja:
+Piotrków Tryb i okolice<span className="font-medium text-foreground mr-2">Lokalizacja:</span>
                     Poddębice i okolice
                   </p>
                 </div>
@@ -123,6 +109,5 @@ export function Contact() {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
