@@ -12,10 +12,10 @@ export interface Event {
 export const upcomingEvents: Event[] = [
   {
     id: 'event-1',
-    title: 'Nocny Przejazd - Centrum Poddębic',
+    title: 'Nocny Przejazd - Centrum Piotrkowa',
     date: '2025-03-15',
     time: '20:00',
-    location: 'Start: Rynek w Poddębicach',
+    location: 'Start: Rynek w Piotrkowie',
     description: 'Klasyczny nocny przejazd przez centrum miasta. Trasa prowadzi najważniejszymi ulicami z pięknymi iluminacjami. Muzyka, dobra energia i bezpieczna jazda w kolumnie!',
     distance: '12 km',
     difficulty: 'Początkujący',
