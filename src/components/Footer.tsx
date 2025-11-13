@@ -1,9 +1,7 @@
 import { Heart } from 'lucide-react';
 import logoImg from '@/assets/logo-wyrolowani.png';
-
 export function Footer() {
-  return (
-    <footer className="border-t border-border bg-card/30 backdrop-blur-sm">
+  return <footer className="border-t border-border bg-card/30 backdrop-blur-sm">
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-3 gap-8">
           {/* Logo & Description */}
@@ -12,7 +10,7 @@ export function Footer() {
               <img src={logoImg} alt="Wyrolowani – logo" className="h-full w-full object-contain bg-transparent" />
             </div>
             <p className="text-sm text-muted-foreground">
-              Społeczność nocnych rolkarzy z Poddębic. Jazda, muzyka, bezpieczeństwo.
+              Społeczność nocnych rolkarzy z Piotrkowa Tryb. Jazda, muzyka, bezpieczeństwo.
             </p>
           </div>
 
@@ -73,6 +71,5 @@ export function Footer() {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 }
