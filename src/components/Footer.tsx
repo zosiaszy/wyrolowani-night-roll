@@ -8,7 +8,7 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Logo & Description */}
           <div className="space-y-4">
-            <div className="h-20 w-20 rounded-full overflow-hidden ring-1 ring-primary/50 transition-all duration-300 hover:scale-105">
+            <div className="h-24 w-24 rounded-full overflow-hidden transition-all duration-300 hover:scale-105">
               <img src={logoImg} alt="Wyrolowani – logo" className="h-full w-full object-contain bg-transparent" />
             </div>
             <p className="text-sm text-muted-foreground">
