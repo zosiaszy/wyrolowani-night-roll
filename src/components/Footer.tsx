@@ -8,7 +8,9 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Logo & Description */}
           <div className="space-y-4">
-            <img src={logoImg} alt="Wyrolowani" className="h-16 w-auto transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_0_10px_rgba(196,170,140,0.5)]" />
+            <div className="h-20 w-20 rounded-full overflow-hidden ring-1 ring-primary/50 transition-all duration-300 hover:scale-105">
+              <img src={logoImg} alt="Wyrolowani – logo" className="h-full w-full object-contain bg-transparent" />
+            </div>
             <p className="text-sm text-muted-foreground">
               Społeczność nocnych rolkarzy z Poddębic. Jazda, muzyka, bezpieczeństwo.
             </p>
