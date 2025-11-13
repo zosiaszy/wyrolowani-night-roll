@@ -129,3 +129,25 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.02em;
 }
 }
+
+@layer components {
+  /* Text glow for better legibility */
+  .text-glow {
+    text-shadow: 0 1px 0 hsl(var(--background) / 0.5), 0 2px 8px hsl(var(--vintage-tan) / 0.6);
+  }
+  /* Subtle border/ring glow */
+  .ring-glow {
+    box-shadow: var(--shadow-vintage);
+  }
+  /* Elevated card surface */
+  .card-elevated {
+    box-shadow: var(--shadow-card);
+    background: var(--gradient-card);
+  }
+  /* Shimmer background helper */
+  .shiny {
+    background-image: linear-gradient(110deg, hsl(var(--card)) 0%, hsl(var(--card)) 40%, hsl(var(--vintage-cream)) 50%, hsl(var(--card)) 60%, hsl(var(--card)) 100%);
+    background-size: 200% 100%;
+  }
+}
+

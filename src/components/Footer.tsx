@@ -21,22 +21,22 @@ export function Footer() {
             <h3 className="font-semibold text-foreground">Szybkie linki</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="#about" className="hover:text-primary transition-colors">
+                <a href="#about" className="hover:text-primary transition-colors story-link text-glow">
                   O projekcie
                 </a>
               </li>
               <li>
-                <a href="#events" className="hover:text-secondary transition-colors">
+                <a href="#events" className="hover:text-secondary transition-colors story-link text-glow">
                   Wydarzenia
                 </a>
               </li>
               <li>
-                <a href="#shop" className="hover:text-accent transition-colors">
+                <a href="#shop" className="hover:text-accent transition-colors story-link text-glow">
                   Sklep
                 </a>
               </li>
               <li>
-                <a href="#gallery" className="hover:text-primary transition-colors">
+                <a href="#gallery" className="hover:text-primary transition-colors story-link text-glow">
                   Galeria
                 </a>
               </li>
@@ -48,17 +48,17 @@ export function Footer() {
             <h3 className="font-semibold text-foreground">Informacje</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="#" className="hover:text-primary transition-colors">
+                <a href="#" className="hover:text-primary transition-colors story-link text-glow">
                   Regulamin przejazdów
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-secondary transition-colors">
+                <a href="#" className="hover:text-secondary transition-colors story-link text-glow">
                   Polityka prywatności
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-accent transition-colors">
+                <a href="#" className="hover:text-accent transition-colors story-link text-glow">
                   Warunki sklepu
                 </a>
               </li>

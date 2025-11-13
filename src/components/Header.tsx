@@ -62,31 +62,31 @@ export function Header() {
           <nav className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection('about')}
-              className="text-foreground hover:text-primary transition-colors font-medium"
+              className="text-foreground hover:text-primary transition-colors font-medium story-link hover-scale text-glow"
             >
               O projekcie
             </button>
             <button
               onClick={() => scrollToSection('events')}
-              className="text-foreground hover:text-secondary transition-colors font-medium"
+              className="text-foreground hover:text-secondary transition-colors font-medium story-link hover-scale text-glow"
             >
               Nightskating
             </button>
             <button
               onClick={() => scrollToSection('shop')}
-              className="text-foreground hover:text-accent transition-colors font-medium"
+              className="text-foreground hover:text-accent transition-colors font-medium story-link hover-scale text-glow"
             >
               Sklep
             </button>
             <button
               onClick={() => scrollToSection('gallery')}
-              className="text-foreground hover:text-primary transition-colors font-medium"
+              className="text-foreground hover:text-primary transition-colors font-medium story-link hover-scale text-glow"
             >
               Galeria
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-foreground hover:text-secondary transition-colors font-medium"
+              className="text-foreground hover:text-secondary transition-colors font-medium story-link hover-scale text-glow"
             >
               Kontakt
             </button>
@@ -137,31 +137,31 @@ export function Header() {
           <nav className="md:hidden py-4 space-y-4 animate-fade-in">
             <button
               onClick={() => scrollToSection('about')}
-              className="block w-full text-left px-4 py-2 text-foreground hover:bg-muted rounded-lg transition-colors"
+              className="block w-full text-left px-4 py-2 text-foreground hover:bg-muted rounded-lg transition-colors story-link hover-scale text-glow"
             >
               O projekcie
             </button>
             <button
               onClick={() => scrollToSection('events')}
-              className="block w-full text-left px-4 py-2 text-foreground hover:bg-muted rounded-lg transition-colors"
+              className="block w-full text-left px-4 py-2 text-foreground hover:bg-muted rounded-lg transition-colors story-link hover-scale text-glow"
             >
               Nightskating
             </button>
             <button
               onClick={() => scrollToSection('shop')}
-              className="block w-full text-left px-4 py-2 text-foreground hover:bg-muted rounded-lg transition-colors"
+              className="block w-full text-left px-4 py-2 text-foreground hover:bg-muted rounded-lg transition-colors story-link hover-scale text-glow"
             >
               Sklep
             </button>
             <button
               onClick={() => scrollToSection('gallery')}
-              className="block w-full text-left px-4 py-2 text-foreground hover:bg-muted rounded-lg transition-colors"
+              className="block w-full text-left px-4 py-2 text-foreground hover:bg-muted rounded-lg transition-colors story-link hover-scale text-glow"
             >
               Galeria
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="block w-full text-left px-4 py-2 text-foreground hover:bg-muted rounded-lg transition-colors"
+              className="block w-full text-left px-4 py-2 text-foreground hover:bg-muted rounded-lg transition-colors story-link hover-scale text-glow"
             >
               Kontakt
             </button>
