@@ -18,7 +18,7 @@ export function Hero() {
         style={{
           backgroundImage: `url(${heroImg})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'left center',
+          backgroundPosition: '80% center',
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background"></div>
