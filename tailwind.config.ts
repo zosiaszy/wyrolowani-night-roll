@@ -50,8 +50,8 @@ export default {
         vintage: {
           tan: "hsl(var(--vintage-tan))",
           beige: "hsl(var(--vintage-beige))",
-          gray: "hsl(var(--vintage-gray))",
-          black: "hsl(var(--vintage-black))",
+          cream: "hsl(var(--vintage-cream))",
+          brown: "hsl(var(--vintage-brown))",
         },
       },
       borderRadius: {
