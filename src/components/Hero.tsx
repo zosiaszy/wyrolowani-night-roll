@@ -24,10 +24,10 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background"></div>
       </div>
 
-      {/* Animated Neon Glow Effects */}
-      <div className="absolute top-20 left-10 w-96 h-96 bg-neon-yellow/20 rounded-full blur-[120px] animate-float"></div>
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-neon-purple/20 rounded-full blur-[120px] animate-float" style={{ animationDelay: '1s' }}></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-neon-cyan/10 rounded-full blur-[150px] animate-float" style={{ animationDelay: '2s' }}></div>
+      {/* Animated Vintage Glow Effects */}
+      <div className="absolute top-20 left-10 w-96 h-96 bg-primary/10 rounded-full blur-[120px] animate-float"></div>
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-[120px] animate-float" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-[150px] animate-float" style={{ animationDelay: '2s' }}></div>
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10 pt-20">
@@ -35,7 +35,7 @@ export function Hero() {
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl font-bold">
             <span className="block text-foreground">Wyrolowani</span>
-            <span className="block text-primary animate-neon-pulse mt-2">
+            <span className="block text-primary mt-2">
               Nocna jazda na rolkach
             </span>
           </h1>
@@ -50,7 +50,7 @@ export function Hero() {
             <Button
               size="lg"
               onClick={() => scrollToSection('events')}
-              className="group bg-primary text-primary-foreground hover:bg-primary/90 shadow-[var(--shadow-neon-yellow)] hover:shadow-[var(--shadow-neon-yellow)] transition-all"
+              className="group bg-primary text-primary-foreground hover:bg-primary/90 shadow-[var(--shadow-vintage)] transition-all"
             >
               Sprawdź przejazdy
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

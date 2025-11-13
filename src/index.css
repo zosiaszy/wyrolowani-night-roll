@@ -8,52 +8,50 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Nightskating neon theme - Light mode (backup) */
+    /* Wyrolowani vintage theme - Light mode */
     --background: 0 0% 98%;
-    --foreground: 220 15% 15%;
+    --foreground: 0 0% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 15% 15%;
+    --card-foreground: 0 0% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 15% 15%;
+    --popover-foreground: 0 0% 10%;
 
-    --primary: 54 95% 58%;
-    --primary-foreground: 220 25% 10%;
+    --primary: 30 25% 55%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 180 85% 55%;
-    --secondary-foreground: 220 25% 10%;
+    --secondary: 0 0% 60%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 10% 90%;
-    --muted-foreground: 220 10% 45%;
+    --muted: 30 10% 90%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 270 80% 65%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 25 35% 65%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 70% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 85%;
-    --input: 220 15% 85%;
-    --ring: 54 95% 58%;
+    --border: 30 10% 85%;
+    --input: 30 10% 85%;
+    --ring: 30 25% 55%;
 
     --radius: 0.75rem;
 
-    /* Neon glow effects */
-    --neon-yellow: 54 95% 58%;
-    --neon-cyan: 180 85% 55%;
-    --neon-purple: 270 80% 65%;
-    --neon-pink: 330 85% 65%;
+    /* Vintage colors from logo */
+    --vintage-tan: 30 25% 55%;
+    --vintage-beige: 35 20% 70%;
+    --vintage-gray: 0 0% 50%;
+    --vintage-black: 0 0% 10%;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(54 95% 58% / 0.2), hsl(270 80% 65% / 0.2));
-    --gradient-card: linear-gradient(180deg, hsl(220 15% 95%), hsl(220 15% 100%));
+    --gradient-hero: linear-gradient(135deg, hsl(30 25% 55% / 0.2), hsl(0 0% 10% / 0.3));
+    --gradient-card: linear-gradient(180deg, hsl(30 10% 95%), hsl(0 0% 100%));
     
-    /* Shadows with neon glow */
-    --shadow-neon-yellow: 0 0 20px hsl(54 95% 58% / 0.4);
-    --shadow-neon-cyan: 0 0 20px hsl(180 85% 55% / 0.4);
-    --shadow-neon-purple: 0 0 20px hsl(270 80% 65% / 0.4);
-    --shadow-card: 0 4px 20px hsl(220 15% 15% / 0.08);
+    /* Shadows */
+    --shadow-vintage: 0 4px 20px hsl(0 0% 10% / 0.15);
+    --shadow-card: 0 4px 20px hsl(0 0% 10% / 0.08);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -61,49 +59,47 @@ All colors MUST be HSL.
   }
 
   .dark {
-    /* Nightskating dark theme - Default */
-    --background: 220 25% 8%;
-    --foreground: 0 0% 98%;
+    /* Wyrolowani vintage dark theme - Default */
+    --background: 0 0% 8%;
+    --foreground: 30 20% 90%;
 
-    --card: 220 20% 12%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 12%;
+    --card-foreground: 30 20% 90%;
 
-    --popover: 220 20% 10%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 30 20% 90%;
 
-    --primary: 54 95% 58%;
-    --primary-foreground: 220 25% 10%;
+    --primary: 30 25% 55%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 180 85% 55%;
-    --secondary-foreground: 220 25% 10%;
+    --secondary: 0 0% 30%;
+    --secondary-foreground: 30 20% 90%;
 
-    --muted: 220 15% 18%;
-    --muted-foreground: 220 10% 65%;
+    --muted: 0 0% 18%;
+    --muted-foreground: 30 10% 65%;
 
-    --accent: 270 80% 65%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 25 35% 65%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 70% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 20%;
-    --input: 220 15% 18%;
-    --ring: 54 95% 58%;
+    --border: 0 0% 20%;
+    --input: 0 0% 18%;
+    --ring: 30 25% 55%;
 
-    /* Neon colors remain same for dark */
-    --neon-yellow: 54 95% 58%;
-    --neon-cyan: 180 85% 55%;
-    --neon-purple: 270 80% 65%;
-    --neon-pink: 330 85% 65%;
+    /* Vintage colors from logo */
+    --vintage-tan: 30 25% 55%;
+    --vintage-beige: 35 20% 70%;
+    --vintage-gray: 0 0% 50%;
+    --vintage-black: 0 0% 10%;
     
     /* Dark mode gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(54 95% 58% / 0.15), hsl(270 80% 65% / 0.15));
-    --gradient-card: linear-gradient(180deg, hsl(220 20% 12%), hsl(220 20% 10%));
+    --gradient-hero: linear-gradient(135deg, hsl(30 25% 55% / 0.15), hsl(0 0% 10% / 0.3));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 12%), hsl(0 0% 10%));
     
-    /* Enhanced neon glows for dark mode */
-    --shadow-neon-yellow: 0 0 30px hsl(54 95% 58% / 0.5), 0 0 60px hsl(54 95% 58% / 0.3);
-    --shadow-neon-cyan: 0 0 30px hsl(180 85% 55% / 0.5), 0 0 60px hsl(180 85% 55% / 0.3);
-    --shadow-neon-purple: 0 0 30px hsl(270 80% 65% / 0.5), 0 0 60px hsl(270 80% 65% / 0.3);
+    /* Vintage shadows for dark mode */
+    --shadow-vintage: 0 8px 32px hsl(0 0% 0% / 0.5);
     --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.4);
   }
 }

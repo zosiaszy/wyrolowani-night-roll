@@ -1,5 +1,5 @@
 import { Heart } from 'lucide-react';
-import logoImg from '@/assets/logo-wyrolowani.jpg';
+import logoImg from '@/assets/logo-wyrolowani.png';
 
 export function Footer() {
   return (

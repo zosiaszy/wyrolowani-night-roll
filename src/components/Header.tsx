@@ -3,7 +3,7 @@ import { Menu, X, ShoppingCart, Sun, Moon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useCart } from '@/contexts/CartContext';
 import { Link } from 'react-router-dom';
-import logoImg from '@/assets/logo-wyrolowani.jpg';
+import logoImg from '@/assets/logo-wyrolowani.png';
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,7 +52,7 @@ export function Header() {
             <img 
               src={logoImg} 
               alt="Wyrolowani Logo" 
-              className="h-12 w-auto transition-transform group-hover:scale-110"
+              className="h-14 w-auto transition-transform group-hover:scale-110"
             />
           </Link>
 
