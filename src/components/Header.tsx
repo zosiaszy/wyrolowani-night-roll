@@ -52,7 +52,7 @@ export function Header() {
             <img 
               src={logoImg} 
               alt="Wyrolowani Logo" 
-              className="h-14 w-auto transition-transform group-hover:scale-110"
+              className="h-20 w-auto transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_rgba(196,170,140,0.6)] animate-fade-in"
             />
           </Link>
 
