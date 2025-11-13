@@ -25,7 +25,7 @@ All colors MUST be HSL.
     --secondary-foreground: 0 0% 8%;
 
     --muted: 35 20% 85%;
-    --muted-foreground: 0 0% 30%;
+    --muted-foreground: 0 0% 20%;
 
     --accent: 35 25% 60%;
     --accent-foreground: 0 0% 8%;
@@ -81,7 +81,7 @@ All colors MUST be HSL.
     --secondary-foreground: 0 0% 10%;
 
     --muted: 0 0% 20%;
-    --muted-foreground: 35 15% 65%;
+    --muted-foreground: 35 15% 75%;
 
     --accent: 35 25% 60%;
     --accent-foreground: 0 0% 10%;
@@ -106,10 +106,10 @@ All colors MUST be HSL.
     --gradient-glow: radial-gradient(circle at 50% 50%, hsl(35 25% 60% / 0.2) 0%, transparent 70%);
     
     /* Dark mode shadows - Intense glow */
-    --shadow-vintage: 0 10px 40px hsl(35 25% 60% / 0.6);
-    --shadow-card: 0 8px 32px hsl(35 25% 60% / 0.4);
-    --shadow-glow: 0 0 60px hsl(35 25% 60% / 0.7);
-    --shadow-elegant: 0 20px 80px hsl(35 25% 60% / 0.5);
+    --shadow-vintage: 0 10px 40px hsl(35 25% 60% / 0.8), 0 0 60px hsl(35 25% 60% / 0.4);
+    --shadow-card: 0 8px 32px hsl(35 25% 60% / 0.5), 0 0 40px hsl(35 25% 60% / 0.3);
+    --shadow-glow: 0 0 60px hsl(35 25% 60% / 0.8), 0 0 100px hsl(35 25% 60% / 0.4);
+    --shadow-elegant: 0 20px 80px hsl(35 25% 60% / 0.6), 0 0 100px hsl(35 25% 60% / 0.3);
   }
 }
 
@@ -121,19 +121,24 @@ All colors MUST be HSL.
 body {
   @apply bg-background text-foreground;
   font-family: 'Montserrat', sans-serif;
+  /* Enhanced text contrast */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   letter-spacing: -0.02em;
+  text-shadow: 0 2px 4px hsl(var(--background) / 0.5);
 }
 }
 
 @layer components {
   /* Text glow for better legibility */
   .text-glow {
-    text-shadow: 0 1px 0 hsl(var(--background) / 0.5), 0 2px 8px hsl(var(--vintage-tan) / 0.6);
+    text-shadow: 0 1px 2px hsl(var(--background) / 0.8), 0 2px 12px hsl(var(--vintage-tan) / 0.7);
   }
   /* Subtle border/ring glow */
   .ring-glow {
@@ -143,6 +148,24 @@ h1, h2, h3, h4, h5, h6 {
   .card-elevated {
     box-shadow: var(--shadow-card);
     background: var(--gradient-card);
+    border: 2px solid hsl(var(--border));
+    position: relative;
+  }
+  .card-elevated::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.4), hsl(var(--secondary) / 0.4));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .card-elevated:hover::before {
+    opacity: 1;
   }
   /* Shimmer background helper */
   .shiny {

@@ -20,7 +20,7 @@ export function About() {
           </div>
 
           {/* Main Description */}
-          <div className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-8 md:p-12 space-y-6 animate-fade-in-up shadow-[var(--shadow-card)]">
+          <div className="bg-card/50 backdrop-blur-sm border-2 border-border rounded-2xl p-8 md:p-12 space-y-6 animate-fade-in-up shadow-[var(--shadow-card)] ring-1 ring-primary/30">
             <h3 className="text-2xl font-semibold text-foreground">Nasza misja</h3>
             <p className="text-muted-foreground leading-relaxed text-lg">
               Wyrolowani to projekt, który promuje aktywność fizyczną i zdrowy tryb życia poprzez nocne przejazdy na rolkach. 
@@ -34,7 +34,7 @@ export function About() {
 
           {/* Benefits Grid */}
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-card/30 backdrop-blur-sm border border-border rounded-xl p-8 space-y-4 hover:border-primary transition-all group animate-fade-in">
+            <div className="bg-card/30 backdrop-blur-sm border-2 border-border rounded-xl p-8 space-y-4 hover:border-primary transition-all group animate-fade-in shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-vintage)] ring-1 ring-primary/20 hover:ring-primary/60">
               <Users className="h-12 w-12 text-primary group-hover:scale-110 transition-transform" />
               <h3 className="text-xl font-semibold">Społeczność</h3>
               <ul className="space-y-2 text-muted-foreground">
@@ -53,7 +53,7 @@ export function About() {
               </ul>
             </div>
 
-            <div className="bg-card/30 backdrop-blur-sm border border-border rounded-xl p-8 space-y-4 hover:border-secondary transition-all group animate-fade-in">
+            <div className="bg-card/30 backdrop-blur-sm border-2 border-border rounded-xl p-8 space-y-4 hover:border-secondary transition-all group animate-fade-in shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-vintage)] ring-1 ring-secondary/20 hover:ring-secondary/60">
               <Heart className="h-12 w-12 text-secondary group-hover:scale-110 transition-transform" />
               <h3 className="text-xl font-semibold">Zdrowie</h3>
               <ul className="space-y-2 text-muted-foreground">
@@ -72,7 +72,7 @@ export function About() {
               </ul>
             </div>
 
-            <div className="bg-card/30 backdrop-blur-sm border border-border rounded-xl p-8 space-y-4 hover:border-accent transition-all group animate-fade-in">
+            <div className="bg-card/30 backdrop-blur-sm border-2 border-border rounded-xl p-8 space-y-4 hover:border-accent transition-all group animate-fade-in shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-vintage)] ring-1 ring-accent/20 hover:ring-accent/60">
               <Trophy className="h-12 w-12 text-accent group-hover:scale-110 transition-transform" />
               <h3 className="text-xl font-semibold">Bezpieczeństwo</h3>
               <ul className="space-y-2 text-muted-foreground">
