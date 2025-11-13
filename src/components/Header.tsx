@@ -3,7 +3,7 @@ import { Menu, X, ShoppingCart, Sun, Moon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useCart } from '@/contexts/CartContext';
 import { Link } from 'react-router-dom';
-import logoImg from '@/assets/logo-wyrolowani.png';
+import logoImg from '@/assets/logo-wyrolowani-transparent.png';
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
