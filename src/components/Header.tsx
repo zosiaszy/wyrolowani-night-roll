@@ -49,11 +49,13 @@ export function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <img 
-              src={logoImg} 
-              alt="Wyrolowani Logo" 
-              className="h-20 w-auto transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_rgba(196,170,140,0.6)] animate-fade-in"
-            />
+            <div className="h-20 w-20 rounded-full overflow-hidden ring-1 ring-primary/50 transition-all duration-500 group-hover:scale-110">
+              <img
+                src={logoImg}
+                alt="Wyrolowani – logo"
+                className="h-full w-full object-contain bg-transparent"
+              />
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
