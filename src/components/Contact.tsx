@@ -93,7 +93,7 @@ export function Contact() {
                   </p>
                   <p className="flex items-center">
                     <span className="font-medium text-foreground mr-2">Lokalizacja:</span>
-                    Poddębice i okolice
+                    Piotrków Tryb i okolice
                   </p>
                 </div>
               </div>
