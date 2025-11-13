@@ -24,7 +24,7 @@ export function About() {
             <h3 className="text-2xl font-semibold text-foreground">Nasza misja</h3>
             <p className="text-muted-foreground leading-relaxed text-lg">
               Wyrolowani to projekt, który promuje aktywność fizyczną i zdrowy tryb życia poprzez nocne przejazdy na rolkach. 
-              Jeździmy po ulicach Poddębic i okolic, tworząc bezpieczną i energetyczną kolumnę rolkarzy, którzy kochają miasto nocą.
+              Jeździmy po ulicach Piotrkowa i okolic, tworząc bezpieczną i energetyczną kolumnę rolkarzy, którzy kochają miasto nocą.
             </p>
             <p className="text-muted-foreground leading-relaxed text-lg">
               Każdy przejazd to połączenie muzyki, świateł miasta i wspólnej pasji. Dbamy o bezpieczeństwo - obowiązkowo w kaskach 

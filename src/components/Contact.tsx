@@ -77,9 +77,9 @@ export function Contact() {
                     <span className="font-medium text-foreground mr-2">Email:</span>
                     kontakt@wyrolowani.pl
                   </p>
-                  <p className="flex items-center">Lokalizacja:
-Piotrków Tryb i okolice<span className="font-medium text-foreground mr-2">Lokalizacja:</span>
-                    Poddębice i okolice
+                  <p className="flex items-center">
+                    <span className="font-medium text-foreground mr-2">Lokalizacja:</span>
+                    Piotrków i okolice
                   </p>
                 </div>
               </div>
