@@ -28,7 +28,7 @@ export function Shop() {
             {products.map((product, index) => (
               <Card 
                 key={product.id}
-                className="group overflow-hidden hover:border-accent transition-all hover:shadow-[var(--shadow-card)] animate-fade-in-up"
+                className="group overflow-hidden hover:border-accent transition-all hover:shadow-[var(--shadow-elegant)] animate-fade-in-up border-2 ring-1 ring-accent/20 hover:ring-accent/60"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="relative overflow-hidden aspect-square">
@@ -82,7 +82,7 @@ export function Shop() {
           </div>
 
           {/* Info Box */}
-          <div className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-8 space-y-4 text-center animate-fade-in">
+          <div className="bg-card/50 backdrop-blur-sm border-2 border-border rounded-xl p-8 space-y-4 text-center animate-fade-in shadow-[var(--shadow-card)] ring-1 ring-primary/30">
             <h3 className="text-2xl font-semibold">Informacje o wysyłce</h3>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Wysyłka kurierem w 2-3 dni robocze. Bezpłatna dostawa przy zamówieniach powyżej 200 zł. 

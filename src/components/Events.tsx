@@ -50,7 +50,7 @@ export function Events() {
             {upcomingEvents.map((event, index) => (
               <Card 
                 key={event.id} 
-                className="group hover:border-primary transition-all hover:shadow-[var(--shadow-card)] animate-fade-in-up"
+                className="group hover:border-primary transition-all hover:shadow-[var(--shadow-elegant)] animate-fade-in-up border-2 ring-1 ring-primary/20 hover:ring-primary/60"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardHeader>

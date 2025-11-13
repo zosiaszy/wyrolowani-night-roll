@@ -35,7 +35,7 @@ export function Contact() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Contact Form */}
-            <div className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-8 space-y-6 animate-fade-in-up">
+            <div className="bg-card/50 backdrop-blur-sm border-2 border-border rounded-xl p-8 space-y-6 animate-fade-in-up shadow-[var(--shadow-card)] ring-1 ring-primary/30">
               <h3 className="text-2xl font-semibold flex items-center">
                 <MessageSquare className="mr-2 h-6 w-6 text-primary" />
                 Formularz kontaktowy
@@ -81,7 +81,7 @@ export function Contact() {
 
             {/* Contact Info */}
             <div className="space-y-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-              <div className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-8 space-y-4">
+              <div className="bg-card/50 backdrop-blur-sm border-2 border-border rounded-xl p-8 space-y-4 shadow-[var(--shadow-card)] ring-1 ring-secondary/30">
                 <h3 className="text-2xl font-semibold flex items-center">
                   <Mail className="mr-2 h-6 w-6 text-secondary" />
                   Dane kontaktowe
@@ -98,7 +98,7 @@ export function Contact() {
                 </div>
               </div>
 
-              <div className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-8 space-y-4">
+              <div className="bg-card/50 backdrop-blur-sm border-2 border-border rounded-xl p-8 space-y-4 shadow-[var(--shadow-card)] ring-1 ring-accent/30">
                 <h3 className="text-2xl font-semibold">Social Media</h3>
                 <p className="text-muted-foreground">
                   Śledź nas w social media, żeby być na bieżąco z nadchodzącymi eventami!

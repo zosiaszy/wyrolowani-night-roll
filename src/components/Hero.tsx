@@ -34,8 +34,8 @@ export function Hero() {
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl font-bold">
-            <span className="block text-foreground">Wyrolowani</span>
-            <span className="block text-primary mt-2">
+            <span className="block text-foreground drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)] text-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" style={{ textShadow: '0 4px 12px rgba(0,0,0,0.9), 0 2px 20px rgba(196,170,140,0.8), 0 0 40px rgba(196,170,140,0.5)' }}>Wyrolowani</span>
+            <span className="block text-primary mt-2 drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]" style={{ textShadow: '0 4px 12px rgba(0,0,0,0.9), 0 2px 20px rgba(196,170,140,0.8), 0 0 40px rgba(196,170,140,0.5)' }}>
               Nocna jazda na rolkach
             </span>
           </h1>
@@ -68,7 +68,7 @@ export function Hero() {
 
           {/* Feature Highlights */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-12 max-w-3xl mx-auto">
-            <div className="flex flex-col items-center space-y-3 p-6 rounded-xl bg-card/50 backdrop-blur-sm border border-border hover:border-primary transition-all group">
+            <div className="flex flex-col items-center space-y-3 p-6 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-border hover:border-primary transition-all group shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-vintage)] ring-1 ring-primary/20 hover:ring-primary/60">
               <Shield className="h-8 w-8 text-primary group-hover:scale-110 transition-transform" />
               <h3 className="font-semibold text-lg">Bezpieczne przejazdy</h3>
               <p className="text-sm text-muted-foreground text-center">
@@ -76,7 +76,7 @@ export function Hero() {
               </p>
             </div>
 
-            <div className="flex flex-col items-center space-y-3 p-6 rounded-xl bg-card/50 backdrop-blur-sm border border-border hover:border-secondary transition-all group">
+            <div className="flex flex-col items-center space-y-3 p-6 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-border hover:border-secondary transition-all group shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-vintage)] ring-1 ring-secondary/20 hover:ring-secondary/60">
               <Music className="h-8 w-8 text-secondary group-hover:scale-110 transition-transform" />
               <h3 className="font-semibold text-lg">Atmosfera nocnego miasta</h3>
               <p className="text-sm text-muted-foreground text-center">
@@ -84,7 +84,7 @@ export function Hero() {
               </p>
             </div>
 
-            <div className="flex flex-col items-center space-y-3 p-6 rounded-xl bg-card/50 backdrop-blur-sm border border-border hover:border-accent transition-all group">
+            <div className="flex flex-col items-center space-y-3 p-6 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-border hover:border-accent transition-all group shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-vintage)] ring-1 ring-accent/20 hover:ring-accent/60">
               <ShoppingBag className="h-8 w-8 text-accent group-hover:scale-110 transition-transform" />
               <h3 className="font-semibold text-lg">Merch dla wyrolowanych</h3>
               <p className="text-sm text-muted-foreground text-center">
