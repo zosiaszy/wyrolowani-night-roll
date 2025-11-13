@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        heading: ['Playfair Display', 'serif'],
+        body: ['Montserrat', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -96,6 +100,22 @@ export default {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-20px)" },
         },
+        "glow-pulse": {
+          "0%, 100%": {
+            filter: "drop-shadow(0 0 5px hsl(var(--vintage-tan) / 0.3))"
+          },
+          "50%": {
+            filter: "drop-shadow(0 0 25px hsl(var(--vintage-tan) / 0.9))"
+          }
+        },
+        "shine": {
+          "0%": {
+            backgroundPosition: "-200% center"
+          },
+          "100%": {
+            backgroundPosition: "200% center"
+          }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -106,6 +126,8 @@ export default {
         "slide-in-right": "slide-in-right 0.3s ease-out",
         "vintage-glow": "vintage-glow 2s ease-in-out infinite",
         "float": "float 3s ease-in-out infinite",
+        "glow-pulse": "glow-pulse 3s ease-in-out infinite",
+        "shine": "shine 3s linear infinite",
       },
     },
   },

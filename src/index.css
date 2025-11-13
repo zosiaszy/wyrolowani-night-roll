@@ -45,17 +45,22 @@ All colors MUST be HSL.
     --vintage-cream: 38 28% 85%;
     --vintage-dark: 0 0% 8%;
     
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(35 25% 60% / 0.25), hsl(32 22% 68% / 0.2));
-    --gradient-card: linear-gradient(180deg, hsl(35 30% 96%), hsl(35 28% 92%));
+    /* Gradients - Elegant beige to brown with glow */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 8%) 0%, hsl(32 22% 40%) 50%, hsl(35 25% 60%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(35 30% 96%), hsl(35 25% 88%));
+    --gradient-vintage: linear-gradient(135deg, hsl(35 25% 60%) 0%, hsl(32 22% 68%) 100%);
+    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(35 25% 60% / 0.3) 0%, transparent 70%);
     
-    /* Shadows */
-    --shadow-vintage: 0 4px 20px hsl(0 0% 8% / 0.15);
-    --shadow-card: 0 4px 20px hsl(0 0% 8% / 0.08);
+    /* Shadows - Enhanced with warm glow */
+    --shadow-vintage: 0 10px 30px hsl(35 25% 60% / 0.4);
+    --shadow-card: 0 4px 20px hsl(35 25% 60% / 0.2);
+    --shadow-glow: 0 0 50px hsl(35 25% 60% / 0.5);
+    --shadow-elegant: 0 20px 60px hsl(35 25% 60% / 0.3);
     
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  /* Animations - Smooth and elegant */
+  --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --transition-elegant: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   .dark {
@@ -94,22 +99,33 @@ All colors MUST be HSL.
     --vintage-cream: 38 28% 85%;
     --vintage-dark: 0 0% 8%;
     
-    /* Dark mode gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(35 25% 60% / 0.15), hsl(0 0% 8% / 0.3));
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 14%), hsl(0 0% 12%));
+    /* Dark mode gradients - Rich and glowing */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 8%) 0%, hsl(32 22% 30%) 50%, hsl(35 25% 60%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 14%), hsl(0 0% 10%));
+    --gradient-vintage: linear-gradient(135deg, hsl(35 25% 60%) 0%, hsl(32 22% 50%) 100%);
+    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(35 25% 60% / 0.2) 0%, transparent 70%);
     
-    /* Vintage shadows for dark mode */
-    --shadow-vintage: 0 8px 32px hsl(0 0% 0% / 0.7);
-    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.6);
+    /* Dark mode shadows - Intense glow */
+    --shadow-vintage: 0 10px 40px hsl(35 25% 60% / 0.6);
+    --shadow-card: 0 8px 32px hsl(35 25% 60% / 0.4);
+    --shadow-glow: 0 0 60px hsl(35 25% 60% / 0.7);
+    --shadow-elegant: 0 20px 80px hsl(35 25% 60% / 0.5);
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
+* {
+  @apply border-border;
+}
 
-  body {
-    @apply bg-background text-foreground;
-  }
+body {
+  @apply bg-background text-foreground;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
 }
