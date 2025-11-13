@@ -1,6 +1,6 @@
 import { ArrowRight, Shield, Music, ShoppingBag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import heroImg from '@/assets/hero-nightskating.jpg';
+import heroImg from '@/assets/hero-rollerblades.jpg';
 
 export function Hero() {
   const scrollToSection = (id: string) => {
@@ -18,7 +18,7 @@ export function Hero() {
         style={{
           backgroundImage: `url(${heroImg})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'left center',
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background"></div>
