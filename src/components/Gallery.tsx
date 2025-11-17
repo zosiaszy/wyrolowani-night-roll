@@ -56,18 +56,19 @@ export function Gallery() {
             {galleryImages.map((image, index) => (
               <div
                 key={index}
-                className="group relative aspect-[4/3] overflow-hidden rounded-2xl cursor-pointer animate-fade-in-up hover:shadow-[var(--shadow-glow)] hover:-translate-y-2 transition-all duration-300 ring-2 ring-border/50 hover:ring-accent/80"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="group relative aspect-[4/3] overflow-hidden rounded-2xl cursor-pointer animate-fade-in-up hover:shadow-[var(--shadow-glow)] hover:-translate-y-3 transition-all duration-500 ring-2 ring-border/50 hover:ring-primary/80 hover:scale-[1.02]"
+                style={{ animationDelay: `${index * 0.15}s` }}
                 onClick={() => openLightbox(index)}
               >
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-1"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <p className="text-base text-foreground font-semibold">{image.alt}</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-6">
+                  <p className="text-base text-foreground font-semibold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">{image.alt}</p>
                 </div>
+                <div className="absolute inset-0 ring-2 ring-primary/0 group-hover:ring-primary/60 transition-all duration-500 rounded-2xl"></div>
               </div>
             ))}
           </div>

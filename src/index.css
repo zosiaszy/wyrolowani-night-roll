@@ -8,54 +8,54 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Wyrolowani beige/tan theme from logo - Light mode */
-    --background: 35 28% 92%;
-    --foreground: 0 0% 8%;
+    /* Dark theme with orange/yellow accents from roller skate wheels */
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
 
-    --card: 35 30% 96%;
-    --card-foreground: 0 0% 8%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 35 30% 96%;
-    --popover-foreground: 0 0% 8%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 35 25% 60%;
+    --primary: 30 100% 50%;
     --primary-foreground: 0 0% 8%;
 
-    --secondary: 32 22% 68%;
+    --secondary: 10 90% 55%;
     --secondary-foreground: 0 0% 8%;
 
-    --muted: 35 20% 85%;
-    --muted-foreground: 0 0% 20%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 35 25% 60%;
+    --accent: 45 100% 55%;
     --accent-foreground: 0 0% 8%;
 
     --destructive: 0 70% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 35 18% 78%;
-    --input: 35 18% 78%;
-    --ring: 35 25% 60%;
+    --border: 0 0% 22%;
+    --input: 0 0% 18%;
+    --ring: 30 100% 50%;
 
     --radius: 0.75rem;
 
-    /* Vintage colors matching logo exactly */
-    --vintage-tan: 35 25% 60%;
-    --vintage-beige: 32 22% 68%;
-    --vintage-cream: 38 28% 85%;
-    --vintage-dark: 0 0% 8%;
+    /* Roller skate theme colors */
+    --orange-wheels: 30 100% 50%;
+    --red-accent: 10 90% 55%;
+    --yellow-highlight: 45 100% 55%;
+    --dark-base: 0 0% 8%;
     
-    /* Gradients - Elegant beige to brown with glow */
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 8%) 0%, hsl(32 22% 40%) 50%, hsl(35 25% 60%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(35 30% 96%), hsl(35 25% 88%));
-    --gradient-vintage: linear-gradient(135deg, hsl(35 25% 60%) 0%, hsl(32 22% 68%) 100%);
-    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(35 25% 60% / 0.3) 0%, transparent 70%);
+    /* Gradients - Dark with orange/yellow glow */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 5%) 0%, hsl(0 0% 10%) 50%, hsl(30 100% 50% / 0.1) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 12%), hsl(0 0% 8%));
+    --gradient-orange: linear-gradient(135deg, hsl(30 100% 50%) 0%, hsl(45 100% 55%) 100%);
+    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(30 100% 50% / 0.2) 0%, transparent 70%);
     
-    /* Shadows - Enhanced with warm glow */
-    --shadow-vintage: 0 10px 30px hsl(35 25% 60% / 0.4);
-    --shadow-card: 0 4px 20px hsl(35 25% 60% / 0.2);
-    --shadow-glow: 0 0 50px hsl(35 25% 60% / 0.5);
-    --shadow-elegant: 0 20px 60px hsl(35 25% 60% / 0.3);
+    /* Shadows - Enhanced with orange glow */
+    --shadow-vintage: 0 10px 40px hsl(30 100% 50% / 0.4);
+    --shadow-card: 0 8px 32px hsl(30 100% 50% / 0.3);
+    --shadow-glow: 0 0 60px hsl(30 100% 50% / 0.5), 0 0 100px hsl(45 100% 55% / 0.3);
+    --shadow-elegant: 0 20px 80px hsl(30 100% 50% / 0.4), 0 0 100px hsl(30 100% 50% / 0.2);
     
   /* Animations - Smooth and elegant */
   --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -64,52 +64,52 @@ All colors MUST be HSL.
   }
 
   .dark {
-    /* Wyrolowani beige/tan dark theme from logo - Default */
-    --background: 0 0% 10%;
-    --foreground: 35 25% 88%;
+    /* Same as light mode - always dark theme */
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
 
-    --card: 0 0% 14%;
-    --card-foreground: 35 25% 88%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 12%;
-    --popover-foreground: 35 25% 88%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 35 25% 60%;
-    --primary-foreground: 0 0% 10%;
+    --primary: 30 100% 50%;
+    --primary-foreground: 0 0% 8%;
 
-    --secondary: 32 22% 68%;
-    --secondary-foreground: 0 0% 10%;
+    --secondary: 10 90% 55%;
+    --secondary-foreground: 0 0% 8%;
 
     --muted: 0 0% 20%;
-    --muted-foreground: 35 15% 75%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 35 25% 60%;
-    --accent-foreground: 0 0% 10%;
+    --accent: 45 100% 55%;
+    --accent-foreground: 0 0% 8%;
 
     --destructive: 0 70% 55%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 0 0% 22%;
     --input: 0 0% 18%;
-    --ring: 35 25% 60%;
+    --ring: 30 100% 50%;
 
-    /* Vintage colors matching logo exactly */
-    --vintage-tan: 35 25% 60%;
-    --vintage-beige: 32 22% 68%;
-    --vintage-cream: 38 28% 85%;
-    --vintage-dark: 0 0% 8%;
+    /* Roller skate theme colors */
+    --orange-wheels: 30 100% 50%;
+    --red-accent: 10 90% 55%;
+    --yellow-highlight: 45 100% 55%;
+    --dark-base: 0 0% 8%;
     
-    /* Dark mode gradients - Rich and glowing */
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 8%) 0%, hsl(32 22% 30%) 50%, hsl(35 25% 60%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 14%), hsl(0 0% 10%));
-    --gradient-vintage: linear-gradient(135deg, hsl(35 25% 60%) 0%, hsl(32 22% 50%) 100%);
-    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(35 25% 60% / 0.2) 0%, transparent 70%);
+    /* Dark mode gradients - Rich orange glow */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 5%) 0%, hsl(0 0% 10%) 50%, hsl(30 100% 50% / 0.1) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 12%), hsl(0 0% 8%));
+    --gradient-orange: linear-gradient(135deg, hsl(30 100% 50%) 0%, hsl(45 100% 55%) 100%);
+    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(30 100% 50% / 0.2) 0%, transparent 70%);
     
-    /* Dark mode shadows - Intense glow */
-    --shadow-vintage: 0 10px 40px hsl(35 25% 60% / 0.8), 0 0 60px hsl(35 25% 60% / 0.4);
-    --shadow-card: 0 8px 32px hsl(35 25% 60% / 0.5), 0 0 40px hsl(35 25% 60% / 0.3);
-    --shadow-glow: 0 0 60px hsl(35 25% 60% / 0.8), 0 0 100px hsl(35 25% 60% / 0.4);
-    --shadow-elegant: 0 20px 80px hsl(35 25% 60% / 0.6), 0 0 100px hsl(35 25% 60% / 0.3);
+    /* Dark mode shadows - Intense orange glow */
+    --shadow-vintage: 0 10px 40px hsl(30 100% 50% / 0.5);
+    --shadow-card: 0 8px 32px hsl(30 100% 50% / 0.4);
+    --shadow-glow: 0 0 60px hsl(30 100% 50% / 0.6), 0 0 100px hsl(45 100% 55% / 0.3);
+    --shadow-elegant: 0 20px 80px hsl(30 100% 50% / 0.5), 0 0 100px hsl(30 100% 50% / 0.3);
   }
 }
 
