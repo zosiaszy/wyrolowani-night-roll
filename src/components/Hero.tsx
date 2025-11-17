@@ -1,6 +1,6 @@
 import { ArrowRight, Shield, Music, ShoppingBag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import heroImg from '@/assets/hero-rollerblades.jpg';
+import heroImg from '@/assets/hero-nightskating-premium.jpg';
 
 export function Hero() {
   const scrollToSection = (id: string) => {
@@ -18,10 +18,11 @@ export function Hero() {
         style={{
           backgroundImage: `url(${heroImg})`,
           backgroundSize: 'cover',
-          backgroundPosition: '80% center',
+          backgroundPosition: 'center center',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/40 to-transparent"></div>
       </div>
 
       {/* Animated Vintage Glow Effects */}
@@ -30,64 +31,64 @@ export function Hero() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-[150px] animate-float" style={{ animationDelay: '2s' }}></div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 relative z-10 pt-20">
-        <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
+      <div className="container mx-auto px-4 md:px-8 lg:px-12 relative z-10 pt-20">
+        <div className="max-w-5xl text-left space-y-12 animate-fade-in-up">
           {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl font-bold">
-            <span className="block text-foreground drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)] text-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" style={{ textShadow: '0 4px 12px rgba(0,0,0,0.9), 0 2px 20px rgba(196,170,140,0.8), 0 0 40px rgba(196,170,140,0.5)' }}>Wyrolowani</span>
-            <span className="block text-primary mt-2 drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]" style={{ textShadow: '0 4px 12px rgba(0,0,0,0.9), 0 2px 20px rgba(196,170,140,0.8), 0 0 40px rgba(196,170,140,0.5)' }}>
-              Nocna jazda na rolkach
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-[0.9]">
+            <span className="block text-foreground" style={{ textShadow: '0 8px 24px rgba(0,0,0,0.9), 0 4px 12px rgba(196,170,140,0.8)' }}>Wyrolowani</span>
+            <span className="block text-primary mt-4" style={{ textShadow: '0 8px 24px rgba(0,0,0,0.9), 0 4px 12px rgba(196,170,140,0.8)' }}>
+              Nocna jazda<br />na rolkach
             </span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl lg:text-3xl text-foreground/90 max-w-3xl leading-relaxed font-light" style={{ textShadow: '0 4px 8px rgba(0,0,0,0.9)' }}>
             Dołącz do społeczności rolkarzy, którzy pokochali nocne miasto. Muzyka, energia i bezpieczna jazda w kolumnie.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+          <div className="flex flex-col sm:flex-row gap-6 items-start pt-8">
             <Button
               size="lg"
               onClick={() => scrollToSection('events')}
-              className="group bg-primary text-primary-foreground hover:bg-primary/90 shadow-[var(--shadow-vintage)] transition-all"
+              className="group bg-primary text-primary-foreground hover:bg-primary/80 shadow-[var(--shadow-elegant)] hover:shadow-[var(--shadow-glow)] transition-all px-10 py-7 text-lg font-semibold"
             >
               Sprawdź przejazdy
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
               size="lg"
               variant="outline"
               onClick={() => scrollToSection('shop')}
-              className="group border-2"
+              className="group border-2 border-foreground/30 bg-background/40 hover:bg-foreground/10 hover:border-foreground/60 backdrop-blur-sm px-10 py-7 text-lg font-semibold shadow-lg"
             >
               Wejdź do sklepu
-              <ShoppingBag className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+              <ShoppingBag className="ml-3 h-6 w-6 group-hover:scale-110 transition-transform" />
             </Button>
           </div>
 
           {/* Feature Highlights */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-12 max-w-3xl mx-auto">
-            <div className="flex flex-col items-center space-y-3 p-6 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-border hover:border-primary transition-all group shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-vintage)] ring-1 ring-primary/20 hover:ring-primary/60">
-              <Shield className="h-8 w-8 text-primary group-hover:scale-110 transition-transform" />
-              <h3 className="font-semibold text-lg">Bezpieczne przejazdy</h3>
-              <p className="text-sm text-muted-foreground text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-16 max-w-6xl">
+            <div className="flex flex-col items-start space-y-4 p-8 rounded-2xl bg-card/60 backdrop-blur-md border-2 border-border/50 hover:border-primary/60 transition-all group shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] ring-1 ring-primary/10 hover:ring-primary/40 hover:-translate-y-1">
+              <Shield className="h-10 w-10 text-primary group-hover:scale-110 transition-transform" />
+              <h3 className="font-bold text-xl">Bezpieczne przejazdy</h3>
+              <p className="text-base text-muted-foreground leading-relaxed">
                 Kask, ochraniacze i bezpieczna trasa
               </p>
             </div>
 
-            <div className="flex flex-col items-center space-y-3 p-6 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-border hover:border-secondary transition-all group shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-vintage)] ring-1 ring-secondary/20 hover:ring-secondary/60">
-              <Music className="h-8 w-8 text-secondary group-hover:scale-110 transition-transform" />
-              <h3 className="font-semibold text-lg">Atmosfera nocnego miasta</h3>
-              <p className="text-sm text-muted-foreground text-center">
+            <div className="flex flex-col items-start space-y-4 p-8 rounded-2xl bg-card/60 backdrop-blur-md border-2 border-border/50 hover:border-secondary/60 transition-all group shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] ring-1 ring-secondary/10 hover:ring-secondary/40 hover:-translate-y-1">
+              <Music className="h-10 w-10 text-secondary group-hover:scale-110 transition-transform" />
+              <h3 className="font-bold text-xl">Atmosfera nocnego miasta</h3>
+              <p className="text-base text-muted-foreground leading-relaxed">
                 Muzyka, światła i niezapomniane chwile
               </p>
             </div>
 
-            <div className="flex flex-col items-center space-y-3 p-6 rounded-xl bg-card/50 backdrop-blur-sm border-2 border-border hover:border-accent transition-all group shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-vintage)] ring-1 ring-accent/20 hover:ring-accent/60">
-              <ShoppingBag className="h-8 w-8 text-accent group-hover:scale-110 transition-transform" />
-              <h3 className="font-semibold text-lg">Merch dla wyrolowanych</h3>
-              <p className="text-sm text-muted-foreground text-center">
+            <div className="flex flex-col items-start space-y-4 p-8 rounded-2xl bg-card/60 backdrop-blur-md border-2 border-border/50 hover:border-accent/60 transition-all group shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] ring-1 ring-accent/10 hover:ring-accent/40 hover:-translate-y-1">
+              <ShoppingBag className="h-10 w-10 text-accent group-hover:scale-110 transition-transform" />
+              <h3 className="font-bold text-xl">Merch dla wyrolowanych</h3>
+              <p className="text-base text-muted-foreground leading-relaxed">
                 Oficjalny streetwear z neonowym stylem
               </p>
             </div>

@@ -14,7 +14,7 @@ export function Contact() {
       description: "Odpowiemy najszybciej jak to możliwe."
     });
   };
-  return <section id="contact" className="py-24 relative overflow-hidden">
+  return <section id="contact" className="py-32 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-[100px]"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-[100px]"></div>
@@ -22,11 +22,11 @@ export function Contact() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto space-y-12">
           {/* Section Header */}
-          <div className="text-center space-y-4 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold">
+          <div className="text-center space-y-6 animate-fade-in mb-8">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold font-heading">
               Skontaktuj się <span className="text-primary">z nami</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Masz pytania o przejazdy, merch lub chcesz do nas dołączyć? Napisz!
             </p>
           </div>
@@ -38,26 +38,26 @@ export function Contact() {
                 <MessageSquare className="mr-2 h-6 w-6 text-primary" />
                 Formularz kontaktowy
               </h3>
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2">
+                  <label htmlFor="name" className="block text-base font-semibold mb-3">
                     Imię i nazwisko
                   </label>
-                  <Input id="name" placeholder="Jan Kowalski" required />
+                  <Input id="name" placeholder="Jan Kowalski" required className="h-14 text-base px-5" />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2">
+                  <label htmlFor="email" className="block text-base font-semibold mb-3">
                     Email
                   </label>
-                  <Input id="email" type="email" placeholder="jan@example.com" required />
+                  <Input id="email" type="email" placeholder="jan@example.com" required className="h-14 text-base px-5" />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2">
+                  <label htmlFor="message" className="block text-base font-semibold mb-3">
                     Wiadomość
                   </label>
-                  <Textarea id="message" placeholder="Twoja wiadomość..." rows={5} required />
+                  <Textarea id="message" placeholder="Twoja wiadomość..." rows={6} required className="text-base px-5 py-4" />
                 </div>
-                <Button type="submit" className="w-full">
+                <Button type="submit" size="lg" className="w-full py-6 text-base font-bold shadow-[var(--shadow-elegant)] hover:shadow-[var(--shadow-glow)]">
                   Wyślij wiadomość
                 </Button>
               </form>

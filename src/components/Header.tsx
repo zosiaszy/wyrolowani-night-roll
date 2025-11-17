@@ -49,7 +49,7 @@ export function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="h-16 w-16 rounded-full overflow-hidden transition-all duration-500 group-hover:scale-110">
+            <div className="h-[90px] w-[90px] rounded-full overflow-hidden transition-all duration-500 group-hover:scale-110">
               <img
                 src={logoImg}
                 alt="Wyrolowani – logo"
@@ -59,34 +59,34 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-6">
             <button
               onClick={() => scrollToSection('about')}
-              className="text-foreground hover:text-primary transition-colors font-medium story-link hover-scale text-glow"
+              className="text-foreground hover:text-primary transition-colors font-semibold story-link hover-scale text-glow text-base px-3"
             >
               O projekcie
             </button>
             <button
               onClick={() => scrollToSection('events')}
-              className="text-foreground hover:text-secondary transition-colors font-medium story-link hover-scale text-glow"
+              className="text-foreground hover:text-secondary transition-colors font-semibold story-link hover-scale text-glow text-base px-3"
             >
               Nightskating
             </button>
             <button
               onClick={() => scrollToSection('shop')}
-              className="text-foreground hover:text-accent transition-colors font-medium story-link hover-scale text-glow"
+              className="text-foreground hover:text-accent transition-colors font-semibold story-link hover-scale text-glow text-base px-3"
             >
               Sklep
             </button>
             <button
               onClick={() => scrollToSection('gallery')}
-              className="text-foreground hover:text-primary transition-colors font-medium story-link hover-scale text-glow"
+              className="text-foreground hover:text-primary transition-colors font-semibold story-link hover-scale text-glow text-base px-3"
             >
               Galeria
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-foreground hover:text-secondary transition-colors font-medium story-link hover-scale text-glow"
+              className="text-foreground hover:text-secondary transition-colors font-semibold story-link hover-scale text-glow text-base px-3"
             >
               Kontakt
             </button>

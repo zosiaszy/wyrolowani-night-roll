@@ -28,7 +28,7 @@ export function Events() {
   };
 
   return (
-    <section id="events" className="py-24 relative overflow-hidden bg-muted/20">
+    <section id="events" className="py-32 relative overflow-hidden bg-muted/20">
       {/* Background Effects */}
       <div className="absolute top-20 left-10 w-96 h-96 bg-primary/10 rounded-full blur-[100px]"></div>
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-[100px]"></div>
@@ -36,11 +36,11 @@ export function Events() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto space-y-12">
           {/* Section Header */}
-          <div className="text-center space-y-4 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold">
+          <div className="text-center space-y-6 animate-fade-in mb-8">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold font-heading">
               Nadchodzące <span className="text-secondary">przejazdy</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Dołącz do nas na najbliższych nightskating eventach. Każdy przejazd to nowe doświadczenie!
             </p>
           </div>
@@ -50,7 +50,7 @@ export function Events() {
             {upcomingEvents.map((event, index) => (
               <Card 
                 key={event.id} 
-                className="group hover:border-primary transition-all hover:shadow-[var(--shadow-elegant)] animate-fade-in-up border-2 ring-1 ring-primary/20 hover:ring-primary/60"
+                className="group hover:border-primary transition-all hover:shadow-[var(--shadow-glow)] hover:-translate-y-2 animate-fade-in-up border-2 ring-1 ring-primary/30 hover:ring-primary/80 duration-300"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardHeader>
