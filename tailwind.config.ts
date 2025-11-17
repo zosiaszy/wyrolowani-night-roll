@@ -51,9 +51,12 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        "orange-wheels": "hsl(var(--orange-wheels))",
-        "red-accent": "hsl(var(--red-accent))",
-        "yellow-highlight": "hsl(var(--yellow-highlight))",
+        vintage: {
+          tan: "hsl(var(--vintage-tan))",
+          beige: "hsl(var(--vintage-beige))",
+          cream: "hsl(var(--vintage-cream))",
+          dark: "hsl(var(--vintage-dark))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
