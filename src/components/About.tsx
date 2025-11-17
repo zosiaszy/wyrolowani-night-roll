@@ -2,26 +2,26 @@ import { Users, Heart, Trophy, Sparkles } from 'lucide-react';
 
 export function About() {
   return (
-    <section id="about" className="py-24 relative overflow-hidden">
+    <section id="about" className="py-32 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-neon-cyan/10 rounded-full blur-[100px]"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-neon-purple/10 rounded-full blur-[100px]"></div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto space-y-12">
+        <div className="max-w-5xl mx-auto space-y-16">
           {/* Section Header */}
-          <div className="text-center space-y-4 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold">
+          <div className="text-center space-y-6 animate-fade-in">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold font-heading">
               <span className="text-primary">Dlaczego</span> Wyrolowani?
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Nightskating to nie tylko sport - to styl życia, społeczność i niezapomniane przeżycia w nocnym mieście
             </p>
           </div>
 
           {/* Main Description */}
-          <div className="bg-card/50 backdrop-blur-sm border-2 border-border rounded-2xl p-8 md:p-12 space-y-6 animate-fade-in-up shadow-[var(--shadow-card)] ring-1 ring-primary/30">
-            <h3 className="text-2xl font-semibold text-foreground">Nasza misja</h3>
+          <div className="bg-card/60 backdrop-blur-md border-2 border-border rounded-2xl p-10 md:p-14 space-y-8 animate-fade-in-up shadow-[var(--shadow-card)] ring-1 ring-primary/40">
+            <h3 className="text-3xl font-bold text-foreground font-heading">Nasza misja</h3>
             <p className="text-muted-foreground leading-relaxed text-lg">
               Wyrolowani to projekt, który promuje aktywność fizyczną i zdrowy tryb życia poprzez nocne przejazdy na rolkach. 
               Jeździmy po ulicach Piotrkowa i okolic, tworząc bezpieczną i energetyczną kolumnę rolkarzy, którzy kochają miasto nocą.
@@ -33,100 +33,81 @@ export function About() {
           </div>
 
           {/* Benefits Grid */}
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-card/30 backdrop-blur-sm border-2 border-border rounded-xl p-8 space-y-4 hover:border-primary transition-all group animate-fade-in shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-vintage)] ring-1 ring-primary/20 hover:ring-primary/60">
-              <Users className="h-12 w-12 text-primary group-hover:scale-110 transition-transform" />
-              <h3 className="text-xl font-semibold">Społeczność</h3>
-              <ul className="space-y-2 text-muted-foreground">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-card/50 backdrop-blur-md border-2 border-border rounded-2xl p-10 space-y-5 hover:border-primary transition-all hover:-translate-y-1 group animate-fade-in shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] ring-1 ring-primary/30 hover:ring-primary/70 duration-300">
+              <Users className="h-14 w-14 text-primary group-hover:scale-110 transition-transform" />
+              <h3 className="text-2xl font-bold font-heading">Społeczność</h3>
+              <ul className="space-y-3 text-muted-foreground text-base">
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
+                  <span className="text-primary mr-3 text-xl">•</span>
                   Poznaj nowych ludzi z pasją do rolek
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
+                  <span className="text-primary mr-3 text-xl">•</span>
                   Wspólna energia i pozytywna atmosfera
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">•</span>
+                  <span className="text-primary mr-3 text-xl">•</span>
                   Wydarzenia dla każdego poziomu
                 </li>
               </ul>
             </div>
 
-            <div className="bg-card/30 backdrop-blur-sm border-2 border-border rounded-xl p-8 space-y-4 hover:border-secondary transition-all group animate-fade-in shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-vintage)] ring-1 ring-secondary/20 hover:ring-secondary/60">
-              <Heart className="h-12 w-12 text-secondary group-hover:scale-110 transition-transform" />
-              <h3 className="text-xl font-semibold">Zdrowie</h3>
-              <ul className="space-y-2 text-muted-foreground">
+            <div className="bg-card/50 backdrop-blur-md border-2 border-border rounded-2xl p-10 space-y-5 hover:border-secondary transition-all hover:-translate-y-1 group animate-fade-in shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] ring-1 ring-secondary/30 hover:ring-secondary/70 duration-300">
+              <Heart className="h-14 w-14 text-secondary group-hover:scale-110 transition-transform" />
+              <h3 className="text-2xl font-bold font-heading">Zdrowie</h3>
+              <ul className="space-y-3 text-muted-foreground text-base">
                 <li className="flex items-start">
-                  <span className="text-secondary mr-2">•</span>
+                  <span className="text-secondary mr-3 text-xl">•</span>
                   Świetna forma cardio na świeżym powietrzu
                 </li>
                 <li className="flex items-start">
-                  <span className="text-secondary mr-2">•</span>
+                  <span className="text-secondary mr-3 text-xl">•</span>
                   Wzmacniasz mięśnie nóg i core
                 </li>
                 <li className="flex items-start">
-                  <span className="text-secondary mr-2">•</span>
+                  <span className="text-secondary mr-3 text-xl">•</span>
                   Rozładowanie stresu po pracy
                 </li>
               </ul>
             </div>
 
-            <div className="bg-card/30 backdrop-blur-sm border-2 border-border rounded-xl p-8 space-y-4 hover:border-accent transition-all group animate-fade-in shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-vintage)] ring-1 ring-accent/20 hover:ring-accent/60">
-              <Trophy className="h-12 w-12 text-accent group-hover:scale-110 transition-transform" />
-              <h3 className="text-xl font-semibold">Bezpieczeństwo</h3>
-              <ul className="space-y-2 text-muted-foreground">
+            <div className="bg-card/50 backdrop-blur-md border-2 border-border rounded-2xl p-10 space-y-5 hover:border-accent transition-all hover:-translate-y-1 group animate-fade-in shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] ring-1 ring-accent/30 hover:ring-accent/70 duration-300">
+              <Trophy className="h-14 w-14 text-accent group-hover:scale-110 transition-transform" />
+              <h3 className="text-2xl font-bold font-heading">Rozwój</h3>
+              <ul className="space-y-3 text-muted-foreground text-base">
                 <li className="flex items-start">
-                  <span className="text-accent mr-2">•</span>
-                  Obowiązkowe kaski i ochraniacze
+                  <span className="text-accent mr-3 text-xl">•</span>
+                  Doskonalenie techniki jazdy
                 </li>
                 <li className="flex items-start">
-                  <span className="text-accent mr-2">•</span>
-                  Organizowane trasy z escort
+                  <span className="text-accent mr-3 text-xl">•</span>
+                  Trasy dla każdego poziomu
                 </li>
                 <li className="flex items-start">
-                  <span className="text-accent mr-2">•</span>
-                  Regulamin i zasady dla wszystkich
+                  <span className="text-accent mr-3 text-xl">•</span>
+                  Wsparcie doświadczonych rolkarzy
                 </li>
               </ul>
             </div>
 
-            <div className="bg-card/30 backdrop-blur-sm border border-border rounded-xl p-8 space-y-4 hover:border-neon-pink transition-all group animate-fade-in">
-              <Sparkles className="h-12 w-12 text-neon-pink group-hover:scale-110 transition-transform" />
-              <h3 className="text-xl font-semibold">Doświadczenie</h3>
-              <ul className="space-y-2 text-muted-foreground">
+            <div className="bg-card/50 backdrop-blur-md border-2 border-border rounded-2xl p-10 space-y-5 hover:border-primary transition-all hover:-translate-y-1 group animate-fade-in shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] ring-1 ring-primary/30 hover:ring-primary/70 duration-300">
+              <Sparkles className="h-14 w-14 text-primary group-hover:scale-110 transition-transform" />
+              <h3 className="text-2xl font-bold font-heading">Atmosfera</h3>
+              <ul className="space-y-3 text-muted-foreground text-base">
                 <li className="flex items-start">
-                  <span className="text-neon-pink mr-2">•</span>
-                  Miasto nocą w zupełnie nowym świetle
+                  <span className="text-primary mr-3 text-xl">•</span>
+                  Miasto nocą w nowym świetle
                 </li>
                 <li className="flex items-start">
-                  <span className="text-neon-pink mr-2">•</span>
-                  Muzyka i neonowe światła
+                  <span className="text-primary mr-3 text-xl">•</span>
+                  Muzyka, światła i energia
                 </li>
                 <li className="flex items-start">
-                  <span className="text-neon-pink mr-2">•</span>
-                  Niezapomniane wspomnienia
+                  <span className="text-primary mr-3 text-xl">•</span>
+                  Niezapomniane przeżycia
                 </li>
               </ul>
-            </div>
-          </div>
-
-          {/* Partners Placeholder */}
-          <div className="bg-muted/30 backdrop-blur-sm rounded-xl p-8 text-center space-y-4">
-            <h3 className="text-xl font-semibold">Nasi partnerzy</h3>
-            <p className="text-muted-foreground">
-              Współpracujemy z lokalnymi instytucjami i firmami, aby zapewnić najlepsze warunki do jazdy
-            </p>
-            <div className="flex flex-wrap justify-center items-center gap-8 pt-4">
-              <div className="w-32 h-16 bg-muted/50 rounded-lg flex items-center justify-center text-muted-foreground text-sm">
-                Partner 1
-              </div>
-              <div className="w-32 h-16 bg-muted/50 rounded-lg flex items-center justify-center text-muted-foreground text-sm">
-                Partner 2
-              </div>
-              <div className="w-32 h-16 bg-muted/50 rounded-lg flex items-center justify-center text-muted-foreground text-sm">
-                Partner 3
-              </div>
             </div>
           </div>
         </div>
