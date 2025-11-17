@@ -18,11 +18,11 @@ export function Hero() {
         style={{
           backgroundImage: `url(${heroImg})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'right center',
+          backgroundPosition: '85% center',
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/60 to-background"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/20"></div>
       </div>
 
       {/* Animated Vintage Glow Effects */}
@@ -31,7 +31,7 @@ export function Hero() {
 
       {/* Content */}
       <div className="container mx-auto px-4 md:px-8 lg:px-12 relative z-10 pt-20">
-        <div className="max-w-3xl text-left space-y-8 animate-fade-in-up">
+        <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[0.95]">
             <span className="block text-foreground" style={{ textShadow: '0 8px 24px rgba(0,0,0,0.9), 0 4px 12px rgba(196,170,140,0.6)' }}>Wyrolowani</span>
@@ -41,12 +41,12 @@ export function Hero() {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-base md:text-lg lg:text-xl text-foreground/90 max-w-2xl leading-relaxed font-light" style={{ textShadow: '0 4px 8px rgba(0,0,0,0.9)' }}>
+          <p className="text-base md:text-lg lg:text-xl text-foreground/90 max-w-2xl mx-auto leading-relaxed font-light" style={{ textShadow: '0 4px 8px rgba(0,0,0,0.9)' }}>
             Dołącz do społeczności rolkarzy, którzy pokochali nocne miasto. Muzyka, energia i bezpieczna jazda w kolumnie.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-5 items-start pt-4">
+          <div className="flex flex-col sm:flex-row gap-5 items-center justify-center pt-4">
             <Button
               size="lg"
               onClick={() => scrollToSection('events')}
@@ -67,8 +67,8 @@ export function Hero() {
           </div>
 
           {/* Feature Highlights */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 pt-8 max-w-4xl">
-            <div className="flex flex-col items-start space-y-2 p-5 rounded-xl bg-card/60 backdrop-blur-md border border-border/50 hover:border-primary/50 transition-all group shadow-sm hover:shadow-[var(--shadow-card)] hover:-translate-y-1">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 pt-8 max-w-4xl mx-auto">
+            <div className="flex flex-col items-center text-center space-y-2 p-5 rounded-xl bg-card/60 backdrop-blur-md border border-border/50 hover:border-primary/50 transition-all group shadow-sm hover:shadow-[var(--shadow-card)] hover:-translate-y-1">
               <Shield className="h-7 w-7 text-primary group-hover:scale-110 transition-transform" />
               <h3 className="font-bold text-base">Bezpieczne przejazdy</h3>
               <p className="text-xs text-muted-foreground leading-relaxed">
@@ -76,7 +76,7 @@ export function Hero() {
               </p>
             </div>
 
-            <div className="flex flex-col items-start space-y-2 p-5 rounded-xl bg-card/60 backdrop-blur-md border border-border/50 hover:border-secondary/50 transition-all group shadow-sm hover:shadow-[var(--shadow-card)] hover:-translate-y-1">
+            <div className="flex flex-col items-center text-center space-y-2 p-5 rounded-xl bg-card/60 backdrop-blur-md border border-border/50 hover:border-secondary/50 transition-all group shadow-sm hover:shadow-[var(--shadow-card)] hover:-translate-y-1">
               <Music className="h-7 w-7 text-secondary group-hover:scale-110 transition-transform" />
               <h3 className="font-bold text-base">Atmosfera nocnego miasta</h3>
               <p className="text-xs text-muted-foreground leading-relaxed">
@@ -84,7 +84,7 @@ export function Hero() {
               </p>
             </div>
 
-            <div className="flex flex-col items-start space-y-2 p-5 rounded-xl bg-card/60 backdrop-blur-md border border-border/50 hover:border-accent/50 transition-all group shadow-sm hover:shadow-[var(--shadow-card)] hover:-translate-y-1">
+            <div className="flex flex-col items-center text-center space-y-2 p-5 rounded-xl bg-card/60 backdrop-blur-md border border-border/50 hover:border-accent/50 transition-all group shadow-sm hover:shadow-[var(--shadow-card)] hover:-translate-y-1">
               <ShoppingBag className="h-7 w-7 text-accent group-hover:scale-110 transition-transform" />
               <h3 className="font-bold text-base">Merch dla wyrolowanych</h3>
               <p className="text-xs text-muted-foreground leading-relaxed">
@@ -95,10 +95,11 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Scroll Indicator - Mouse Shape */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce z-20">
-        <div className="w-5 h-9 border-2 border-primary/70 rounded-full flex items-start justify-center p-2">
-          <div className="w-1 h-2.5 bg-primary rounded-full animate-pulse"></div>
+        <div className="w-6 h-10 border-2 border-primary/70 rounded-full flex flex-col items-center justify-start p-2 bg-background/10 backdrop-blur-sm">
+          <div className="w-1 h-3 bg-primary rounded-full animate-pulse"></div>
+          <div className="w-3 h-[1px] bg-primary/30 mt-2"></div>
         </div>
       </div>
     </section>
