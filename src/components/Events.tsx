@@ -1,4 +1,4 @@
-import { ArrowUpRight, AlertTriangle, Lock } from 'lucide-react';
+import { ArrowUpRight, AlertTriangle, Lock, Sparkles, Zap, Star, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
@@ -31,7 +31,7 @@ export function Events() {
               </Badge>
             </div>
             
-            <div className="grid lg:grid-cols-[auto_1fr] gap-2 items-center">
+            <div className="grid lg:grid-cols-[auto_1fr] gap-2 items-start">
               {/* Facebook Video Embed - Bigger */}
               <div className="aspect-[9/16] w-[280px] md:w-[320px] max-h-[550px] rounded-lg overflow-hidden bg-background/50">
                 <iframe
@@ -47,27 +47,38 @@ export function Events() {
               </div>
               
               {/* Text Content */}
-              <div className="flex flex-col justify-center space-y-3 lg:pl-6">
-                <h3 className="text-2xl md:text-3xl font-bold font-heading leading-tight">
+              <div className="flex flex-col justify-start space-y-4 lg:pl-6">
+                <h3 className="text-3xl md:text-4xl font-bold font-heading leading-tight">
                   Nightskating wraca do Łodzi! 🛼
                 </h3>
-                <div className="space-y-3 text-muted-foreground leading-relaxed">
-                  <p className="text-base md:text-lg font-semibold text-foreground">
+                
+                {/* Decorative divider */}
+                <div className="flex items-center gap-3">
+                  <div className="h-px w-12 bg-primary/50"></div>
+                  <Sparkles className="h-4 w-4 text-primary" />
+                  <div className="h-px w-12 bg-primary/50"></div>
+                </div>
+                
+                <div className="space-y-4 text-muted-foreground leading-relaxed">
+                  <p className="text-lg md:text-xl font-semibold text-foreground flex items-center gap-2">
+                    <Zap className="h-5 w-5 text-amber-400" />
                     Decyzja zapadła.
                   </p>
-                  <p>
+                  <p className="text-base md:text-lg">
                     Pierwszy Nightskating w Łodzi w sezonie 2026 – robimy to.
                   </p>
-                  <p>
+                  <p className="text-base md:text-lg">
                     Dokładną datę ogłosimy, jak tylko zamkniemy formalności z trasą i pozwoleniami, ale możemy to powiedzieć już teraz oficjalnie:
                   </p>
-                  <p className="text-lg font-semibold text-primary">
+                  <p className="text-xl md:text-2xl font-semibold text-primary flex items-center gap-2">
+                    <Star className="h-5 w-5 text-primary fill-primary/30" />
                     Nightskating wraca do Łodzi.
                   </p>
-                  <p className="text-foreground font-medium">
+                  <p className="text-foreground font-medium text-lg">
                     Kto czeka na nowy sezon? 🔥
                   </p>
                 </div>
+                
                 <div className="flex flex-col sm:flex-row gap-3 mt-2">
                   <Button 
                     className="w-fit"
@@ -78,8 +89,9 @@ export function Events() {
                     <ArrowUpRight className="ml-2 h-4 w-4" />
                   </Button>
                 </div>
-                <p className="text-sm text-muted-foreground mt-2">
-                  📱 Śledź nas na bieżąco na <a href="https://www.facebook.com/wyrolowani" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Facebooku</a>!
+                <p className="text-sm text-muted-foreground mt-2 flex items-center gap-2">
+                  <Users className="h-4 w-4 text-primary" />
+                  Śledź nas na bieżąco na <a href="https://www.facebook.com/wyrolowani" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline ml-1">Facebooku</a>!
                 </p>
               </div>
             </div>
