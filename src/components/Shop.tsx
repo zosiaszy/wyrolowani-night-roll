@@ -12,6 +12,8 @@ import hoodieWhiteImg from '@/assets/product-hoodie-white.jpg';
 import hoodieBlackImg from '@/assets/product-hoodie-black.jpg';
 import tshirtWhiteImg from '@/assets/product-tshirt-white.jpg';
 import tshirtBlackImg from '@/assets/product-tshirt-black.jpg';
+import tshirtWhiteV2Img from '@/assets/product-tshirt-white-v2.jpg';
+import tshirtBlackV2Img from '@/assets/product-tshirt-black-v2.jpg';
 
 const SHOP_URL = 'https://wyrolowani.cyberstores.pl/sklep/';
 
@@ -46,6 +48,20 @@ const tshirts = [
     description: 'Streetwearowy styl dla prawdziwych rolkarzy',
     price: 99,
     image: tshirtBlackImg,
+  },
+  {
+    id: 'tshirt-white-v2',
+    name: 'Koszulka Night Skating Biała',
+    description: 'Klasyczny design z logo Night Skating',
+    price: 99,
+    image: tshirtWhiteV2Img,
+  },
+  {
+    id: 'tshirt-black-v2',
+    name: 'Koszulka Night Skating Czarna',
+    description: 'Nocny vibe w klasycznej czerni',
+    price: 99,
+    image: tshirtBlackV2Img,
   },
 ];
 
