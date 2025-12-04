@@ -47,7 +47,7 @@ export function Events() {
               </div>
               
               {/* Text Content */}
-              <div className="flex flex-col justify-center space-y-3">
+              <div className="flex flex-col justify-center space-y-3 lg:pl-6">
                 <h3 className="text-2xl md:text-3xl font-bold font-heading leading-tight">
                   Nightskating wraca do Łodzi! 🛼
                 </h3>
