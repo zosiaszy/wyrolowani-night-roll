@@ -33,45 +33,45 @@ export function Header() {
       }`}
     >
       <div className="container mx-auto px-4 py-1">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
+        <div className="flex items-center justify-between h-14 md:h-16">
+          {/* Logo - smaller on mobile */}
           <Link to="/" className="flex items-center group">
             <img
               src={logoImg}
               alt="Wyrolowani – logo"
-              className="h-16 w-16 object-contain transition-transform duration-500 group-hover:scale-110"
+              className="h-10 w-10 md:h-12 md:w-12 object-contain transition-transform duration-500 group-hover:scale-110"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-4 lg:space-x-6">
             <button
               onClick={() => scrollToSection('about')}
-              className="text-foreground hover:text-primary transition-colors font-semibold story-link hover-scale text-glow text-base px-3"
+              className="text-foreground hover:text-primary transition-colors font-medium story-link hover-scale text-glow text-sm lg:text-base px-2 lg:px-3"
             >
               O projekcie
             </button>
             <button
               onClick={() => scrollToSection('shop')}
-              className="text-foreground hover:text-accent transition-colors font-semibold story-link hover-scale text-glow text-base px-3"
+              className="text-foreground hover:text-accent transition-colors font-medium story-link hover-scale text-glow text-sm lg:text-base px-2 lg:px-3"
             >
               Sklep
             </button>
             <button
               onClick={() => scrollToSection('events')}
-              className="text-foreground hover:text-secondary transition-colors font-semibold story-link hover-scale text-glow text-base px-3"
+              className="text-foreground hover:text-secondary transition-colors font-medium story-link hover-scale text-glow text-sm lg:text-base px-2 lg:px-3"
             >
               Nightskating
             </button>
             <button
               onClick={() => scrollToSection('gallery')}
-              className="text-foreground hover:text-primary transition-colors font-semibold story-link hover-scale text-glow text-base px-3"
+              className="text-foreground hover:text-primary transition-colors font-medium story-link hover-scale text-glow text-sm lg:text-base px-2 lg:px-3"
             >
               Galeria
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-foreground hover:text-secondary transition-colors font-semibold story-link hover-scale text-glow text-base px-3"
+              className="text-foreground hover:text-secondary transition-colors font-medium story-link hover-scale text-glow text-sm lg:text-base px-2 lg:px-3"
             >
               Kontakt
             </button>
@@ -81,43 +81,43 @@ export function Header() {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="md:hidden h-9 w-9"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <nav className="md:hidden py-4 space-y-4 animate-fade-in">
+          <nav className="md:hidden py-3 space-y-2 animate-fade-in border-t border-primary/20">
             <button
               onClick={() => scrollToSection('about')}
-              className="block w-full text-left px-4 py-2 text-foreground hover:bg-muted rounded-lg transition-colors story-link hover-scale text-glow"
+              className="block w-full text-left px-4 py-2 text-sm text-foreground hover:bg-muted rounded-lg transition-colors"
             >
               O projekcie
             </button>
             <button
               onClick={() => scrollToSection('shop')}
-              className="block w-full text-left px-4 py-2 text-foreground hover:bg-muted rounded-lg transition-colors story-link hover-scale text-glow"
+              className="block w-full text-left px-4 py-2 text-sm text-foreground hover:bg-muted rounded-lg transition-colors"
             >
               Sklep
             </button>
             <button
               onClick={() => scrollToSection('events')}
-              className="block w-full text-left px-4 py-2 text-foreground hover:bg-muted rounded-lg transition-colors story-link hover-scale text-glow"
+              className="block w-full text-left px-4 py-2 text-sm text-foreground hover:bg-muted rounded-lg transition-colors"
             >
               Nightskating
             </button>
             <button
               onClick={() => scrollToSection('gallery')}
-              className="block w-full text-left px-4 py-2 text-foreground hover:bg-muted rounded-lg transition-colors story-link hover-scale text-glow"
+              className="block w-full text-left px-4 py-2 text-sm text-foreground hover:bg-muted rounded-lg transition-colors"
             >
               Galeria
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="block w-full text-left px-4 py-2 text-foreground hover:bg-muted rounded-lg transition-colors story-link hover-scale text-glow"
+              className="block w-full text-left px-4 py-2 text-sm text-foreground hover:bg-muted rounded-lg transition-colors"
             >
               Kontakt
             </button>
