@@ -72,12 +72,14 @@ export function Header() {
             >
               Nightskating
             </button>
-            <button
-              onClick={() => scrollToSection('shop')}
+            <a
+              href="https://wyrolowani.cyberstores.pl/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-foreground hover:text-accent transition-colors font-semibold story-link hover-scale text-glow text-base px-3"
             >
               Sklep
-            </button>
+            </a>
             <button
               onClick={() => scrollToSection('gallery')}
               className="text-foreground hover:text-primary transition-colors font-semibold story-link hover-scale text-glow text-base px-3"
@@ -147,12 +149,14 @@ export function Header() {
             >
               Nightskating
             </button>
-            <button
-              onClick={() => scrollToSection('shop')}
+            <a
+              href="https://wyrolowani.cyberstores.pl/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="block w-full text-left px-4 py-2 text-foreground hover:bg-muted rounded-lg transition-colors story-link hover-scale text-glow"
             >
               Sklep
-            </button>
+            </a>
             <button
               onClick={() => scrollToSection('gallery')}
               className="block w-full text-left px-4 py-2 text-foreground hover:bg-muted rounded-lg transition-colors story-link hover-scale text-glow"
