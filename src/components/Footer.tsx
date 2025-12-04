@@ -4,19 +4,19 @@ export function Footer() {
   return (
     <footer className="border-t border-border bg-card/30 backdrop-blur-sm">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="flex flex-col md:flex-row md:justify-between gap-8">
           {/* Logo & Description */}
           <div className="space-y-4">
-            <div className="h-32 w-32 rounded-full overflow-hidden transition-all duration-300 hover:scale-105">
+            <div className="h-16 w-16 md:h-32 md:w-32 rounded-full overflow-hidden transition-all duration-300 hover:scale-105">
               <img src={logoImg} alt="Wyrolowani – logo" className="h-full w-full object-contain bg-transparent" />
             </div>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground max-w-xs">
               Społeczność nocnych rolkarzy z Piotrkowa Tryb. Jazda, muzyka, bezpieczeństwo.
             </p>
           </div>
 
-          {/* Quick Links */}
-          <div className="space-y-4">
+          {/* Quick Links - aligned right */}
+          <div className="space-y-4 md:text-right">
             <h3 className="font-semibold text-foreground">Szybkie linki</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
@@ -45,7 +45,7 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
-          <p>© Wyrolowani 2025</p>
+          <p>© Wyrolowani 2025. All rights reserved.</p>
         </div>
       </div>
     </footer>

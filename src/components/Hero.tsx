@@ -28,10 +28,13 @@ export function Hero() {
       {/* Main Content */}
       <div className="container mx-auto px-4 relative z-10 flex-1 flex items-center pt-24 md:pt-32 pb-32 md:pb-48">
         <div className="max-w-4xl mx-auto text-center space-y-4 md:space-y-6 animate-fade-in-up">
-          {/* Main Heading - bold elegant, responsive */}
+          {/* Main Heading - bold elegant with enhanced glow */}
           <h1 
-            className="font-heading text-primary text-4xl sm:text-5xl md:text-7xl lg:text-8xl tracking-wider font-bold"
-            style={{ textShadow: '0 0 30px hsl(35 25% 60% / 0.5), 0 0 60px hsl(35 25% 60% / 0.2)' }}
+            className="font-heading text-primary text-4xl sm:text-5xl md:text-7xl lg:text-8xl tracking-wider font-bold animate-pulse-glow"
+            style={{ 
+              textShadow: '0 0 20px hsl(35 25% 65% / 0.8), 0 0 40px hsl(35 25% 60% / 0.5), 0 0 80px hsl(35 25% 55% / 0.3), 0 0 120px hsl(35 25% 50% / 0.2)',
+              filter: 'drop-shadow(0 0 10px hsl(35 25% 60% / 0.4))'
+            }}
           >
             WYROLOWANI
           </h1>
@@ -45,24 +48,26 @@ export function Hero() {
             Muzyka, energia i bezpieczna jazda w kolumnie.
           </p>
 
-          {/* CTA Buttons - responsive */}
+          {/* CTA Buttons - enhanced visibility and hover effects */}
           <div className="flex flex-col sm:flex-row gap-3 items-center justify-center pt-2 md:pt-4">
             <Button
               size="lg"
               onClick={() => scrollToSection('events')}
-              className="group bg-primary/80 hover:bg-primary text-primary-foreground px-6 md:px-8 py-5 md:py-6 text-xs md:text-sm font-medium rounded-lg w-full sm:w-auto"
+              className="group bg-primary hover:bg-primary/90 text-primary-foreground px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg w-full sm:w-auto transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_hsl(35_25%_60%_/_0.5)]"
+              style={{ boxShadow: '0 0 20px hsl(35 25% 60% / 0.3)' }}
             >
               Sprawdź przejazdy
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <a href="https://wyrolowani.cyberstores.pl/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+            <a href="https://wyrolowani.cyberstores.pl/sklep/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
               <Button
                 size="lg"
                 variant="outline"
-                className="group border border-foreground/20 bg-background/30 backdrop-blur-sm hover:bg-background/40 px-6 md:px-8 py-5 md:py-6 text-xs md:text-sm font-medium rounded-lg w-full"
+                className="group border-2 border-primary/50 bg-background/40 backdrop-blur-sm hover:bg-primary/20 hover:border-primary px-6 md:px-8 py-5 md:py-6 text-sm md:text-base font-semibold rounded-lg w-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_hsl(35_25%_60%_/_0.4)]"
+                style={{ boxShadow: '0 0 15px hsl(35 25% 60% / 0.2)' }}
               >
                 Wejdź do sklepu
-                <ShoppingBag className="ml-2 h-4 w-4" />
+                <ShoppingBag className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:scale-110 transition-transform" />
               </Button>
             </a>
           </div>
