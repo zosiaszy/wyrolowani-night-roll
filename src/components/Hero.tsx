@@ -40,18 +40,20 @@ export function Hero() {
           </h1>
 
           {/* Subtitle - enhanced visibility with stronger glow */}
-          <p 
-            className="text-sm sm:text-base md:text-lg text-foreground max-w-2xl mx-auto leading-relaxed font-semibold tracking-wide px-4 whitespace-nowrap"
-            style={{ textShadow: '0 0 20px hsl(35 25% 65% / 0.6), 0 0 40px hsl(35 25% 60% / 0.3)' }}
-          >
-            Dołącz do społeczności rolkarzy, którzy pokochali nocne miasto.
-          </p>
-          <p 
-            className="text-sm sm:text-base md:text-lg text-foreground max-w-xl mx-auto leading-relaxed font-semibold tracking-wide px-4"
-            style={{ textShadow: '0 0 20px hsl(35 25% 65% / 0.6), 0 0 40px hsl(35 25% 60% / 0.3)' }}
-          >
-            Muzyka, energia i bezpieczna jazda w kolumnie.
-          </p>
+          <div className="space-y-1">
+            <p 
+              className="text-sm sm:text-base md:text-lg text-foreground max-w-2xl mx-auto font-semibold tracking-wide px-4"
+              style={{ textShadow: '0 0 20px hsl(35 25% 65% / 0.6), 0 0 40px hsl(35 25% 60% / 0.3)' }}
+            >
+              Dołącz do społeczności rolkarzy, którzy pokochali nocne miasto.
+            </p>
+            <p 
+              className="text-sm sm:text-base md:text-lg text-foreground max-w-xl mx-auto font-semibold tracking-wide px-4"
+              style={{ textShadow: '0 0 20px hsl(35 25% 65% / 0.6), 0 0 40px hsl(35 25% 60% / 0.3)' }}
+            >
+              Muzyka, energia i bezpieczna jazda w kolumnie.
+            </p>
+          </div>
 
           {/* CTA Buttons - enhanced visibility and hover effects */}
           <div className="flex flex-col sm:flex-row gap-3 items-center justify-center pt-2 md:pt-4">
