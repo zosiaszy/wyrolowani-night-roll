@@ -39,10 +39,10 @@ export function Hero() {
             WYROLOWANI
           </h1>
 
-          {/* Subtitle - matching nav style with glow */}
+          {/* Subtitle - enhanced visibility with stronger glow */}
           <p 
-            className="text-xs sm:text-sm md:text-base text-foreground/90 max-w-xl mx-auto leading-relaxed font-medium tracking-wide px-4"
-            style={{ textShadow: '0 0 15px hsl(35 25% 60% / 0.4)' }}
+            className="text-sm sm:text-base md:text-lg text-foreground max-w-xl mx-auto leading-relaxed font-semibold tracking-wide px-4"
+            style={{ textShadow: '0 0 20px hsl(35 25% 65% / 0.6), 0 0 40px hsl(35 25% 60% / 0.3)' }}
           >
             Dołącz do społeczności rolkarzy, którzy pokochali nocne miasto.<br className="hidden sm:block" />
             Muzyka, energia i bezpieczna jazda w kolumnie.
@@ -84,7 +84,7 @@ export function Hero() {
             >
               <Shield className="h-4 w-4 md:h-5 md:w-5 text-primary" strokeWidth={1.5} />
               <h3 
-                className="text-xs md:text-sm font-medium tracking-wide"
+                className="text-sm md:text-base font-bold tracking-wide"
                 style={{ textShadow: '0 0 12px hsl(35 25% 60% / 0.4)' }}
               >
                 Bezpieczne przejazdy
@@ -100,7 +100,7 @@ export function Hero() {
             >
               <Music className="h-4 w-4 md:h-5 md:w-5 text-primary" strokeWidth={1.5} />
               <h3 
-                className="text-xs md:text-sm font-medium tracking-wide"
+                className="text-sm md:text-base font-bold tracking-wide"
                 style={{ textShadow: '0 0 12px hsl(35 25% 60% / 0.4)' }}
               >
                 Atmosfera nocnego miasta
@@ -116,7 +116,7 @@ export function Hero() {
             >
               <ShoppingBag className="h-4 w-4 md:h-5 md:w-5 text-primary" strokeWidth={1.5} />
               <h3 
-                className="text-xs md:text-sm font-medium tracking-wide"
+                className="text-sm md:text-base font-bold tracking-wide"
                 style={{ textShadow: '0 0 12px hsl(35 25% 60% / 0.4)' }}
               >
                 Merch dla wyrolowanych
