@@ -1,20 +1,19 @@
-import { Calendar, MapPin, Route, TrendingUp } from 'lucide-react';
+import { Calendar, MapPin, ArrowUpRight, AlertTriangle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { upcomingEvents } from '@/data/events';
 
 export function Events() {
-  const getDifficultyColor = (difficulty: string) => {
+  const getDifficultyStyles = (difficulty: string) => {
     switch (difficulty) {
       case 'Początkujący':
-        return 'bg-neon-cyan/20 text-neon-cyan border-neon-cyan/50';
+        return 'border-border text-foreground bg-transparent';
       case 'Średniozaawansowany':
-        return 'bg-primary/20 text-primary border-primary/50';
+        return 'border-primary/50 text-primary bg-transparent';
       case 'Zaawansowany':
-        return 'bg-accent/20 text-accent border-accent/50';
+        return 'border-green-500/50 text-green-500 bg-green-500/10';
       default:
-        return 'bg-muted text-muted-foreground';
+        return 'border-border text-foreground bg-transparent';
     }
   };
 
@@ -28,100 +27,102 @@ export function Events() {
   };
 
   return (
-    <section id="events" className="py-32 relative overflow-hidden bg-muted/20">
-      {/* Background Effects */}
-      <div className="absolute top-20 left-10 w-96 h-96 bg-primary/10 rounded-full blur-[100px]"></div>
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-[100px]"></div>
-
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-6xl mx-auto space-y-12">
+    <section id="events" className="py-24 relative">
+      <div className="container mx-auto px-4">
+        <div className="max-w-6xl mx-auto space-y-10">
           {/* Section Header */}
-          <div className="text-center space-y-6 animate-fade-in mb-8">
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold font-heading">
-              Nadchodzące <span className="text-secondary">przejazdy</span>
+          <div className="text-center space-y-4 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading">
+              <span className="text-primary italic">Nadchodzące</span> przejazdy
             </h2>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Dołącz do nas na najbliższych nightskating eventach. Każdy przejazd to nowe doświadczenie!
+            <p className="text-base text-muted-foreground max-w-2xl mx-auto">
+              Dołącz do nas na najbliższych nightskating eventach. Każdy przejazd to nowe<br />
+              doświadczenie!
             </p>
           </div>
 
           {/* Events Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {upcomingEvents.map((event, index) => (
-              <Card 
+              <div 
                 key={event.id} 
-                className="group hover:border-primary transition-all hover:shadow-[var(--shadow-glow)] hover:-translate-y-2 animate-fade-in-up border-2 ring-1 ring-primary/30 hover:ring-primary/80 duration-300"
+                className="border border-border rounded-xl p-6 space-y-4 animate-fade-in-up bg-card/30"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <CardHeader>
-                  <div className="flex items-start justify-between mb-2">
-                    <Badge variant="outline" className={getDifficultyColor(event.difficulty)}>
-                      {event.difficulty}
-                    </Badge>
-                    <div className="flex items-center text-sm text-muted-foreground">
-                      <Route className="h-4 w-4 mr-1" />
-                      {event.distance}
-                    </div>
+                {/* Header with badge and distance */}
+                <div className="flex items-start justify-between">
+                  <Badge variant="outline" className={getDifficultyStyles(event.difficulty)}>
+                    {event.difficulty}
+                  </Badge>
+                  <span className="text-sm text-muted-foreground">≈ {event.distance}</span>
+                </div>
+
+                {/* Title */}
+                <h3 className="text-lg font-bold font-heading leading-tight">
+                  {event.title}
+                </h3>
+
+                {/* Date and Location */}
+                <div className="space-y-2 text-sm text-muted-foreground">
+                  <div className="flex items-center">
+                    <Calendar className="h-4 w-4 mr-2" />
+                    {formatDate(event.date)} • {event.time}
                   </div>
-                  <CardTitle className="group-hover:text-primary transition-colors">
-                    {event.title}
-                  </CardTitle>
-                  <CardDescription className="space-y-2 pt-2">
-                    <div className="flex items-center text-sm">
-                      <Calendar className="h-4 w-4 mr-2 text-primary" />
-                      {formatDate(event.date)} • {event.time}
-                    </div>
-                    <div className="flex items-center text-sm">
-                      <MapPin className="h-4 w-4 mr-2 text-secondary" />
-                      {event.location}
-                    </div>
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {event.description}
-                  </p>
-                </CardContent>
-                <CardFooter>
-                  <Button 
-                    className="w-full group/btn"
-                    onClick={() => {
-                      const element = document.getElementById('contact');
-                      if (element) element.scrollIntoView({ behavior: 'smooth' });
-                    }}
-                  >
-                    Zapisz się
-                    <TrendingUp className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-                  </Button>
-                </CardFooter>
-              </Card>
+                  <div className="flex items-center">
+                    <MapPin className="h-4 w-4 mr-2" />
+                    Start: {event.location}
+                  </div>
+                </div>
+
+                {/* Description */}
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {event.description}
+                </p>
+
+                {/* Button */}
+                <Button 
+                  className="w-full"
+                  variant="outline"
+                  onClick={() => {
+                    const element = document.getElementById('contact');
+                    if (element) element.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  Zapisz się
+                  <ArrowUpRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
             ))}
           </div>
 
           {/* Info Box */}
-          <div className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-8 space-y-4 animate-fade-in">
-            <h3 className="text-2xl font-semibold flex items-center">
-              <span className="text-primary mr-2">⚠️</span>
-              Ważne informacje
-            </h3>
-            <ul className="space-y-3 text-muted-foreground">
-              <li className="flex items-start">
-                <span className="text-primary mr-2 mt-1">•</span>
-                <span>Obowiązkowy ekwipunek: <strong className="text-foreground">kask, ochraniacze na łokcie i kolana</strong></span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2 mt-1">•</span>
-                <span>Wymagana umiejętność hamowania i bezpiecznej jazdy w kolumnie</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2 mt-1">•</span>
-                <span>Niepełnoletni tylko pod opieką rodzica/opiekuna</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2 mt-1">•</span>
-                <span>Zasady ruchu drogowego obowiązują - jedziemy zgodnie z przepisami</span>
-              </li>
-            </ul>
+          <div className="border border-border rounded-xl p-6 animate-fade-in bg-card/30">
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center flex-shrink-0">
+                <AlertTriangle className="h-5 w-5 text-amber-500" />
+              </div>
+              <div className="space-y-3">
+                <h3 className="text-lg font-bold font-heading">Ważne informacje</h3>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-start">
+                    <span className="text-foreground mr-2">•</span>
+                    Obowiązkowy kask i ochraniacze na wszystkie przejazdy
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-foreground mr-2">•</span>
+                    Zbiórka 15 minut przed startem
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-foreground mr-2">•</span>
+                    Jazda w kolumnie - słuchamy organizatorów
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-foreground mr-2">•</span>
+                    W razie deszczu przejazd może zostać odwołany
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>

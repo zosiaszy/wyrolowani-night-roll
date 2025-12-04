@@ -8,19 +8,19 @@ export function Shop() {
   return (
     <section id="shop" className="py-24 relative">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto space-y-12">
+        <div className="max-w-6xl mx-auto space-y-10">
           {/* Section Header */}
           <div className="text-center space-y-4 animate-fade-in">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading">
-              <span className="font-heading italic text-primary">Sklep</span>{' '}
+              <span className="italic text-primary">Sklep</span>{' '}
               <span className="font-bold">Wyrolowani</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base text-muted-foreground max-w-xl mx-auto">
               Oficjalny merch dla społeczności nightskaterów. Streetwear z neonowym charakterem.
             </p>
           </div>
 
-          {/* Products Grid - Simple cards like in screenshot */}
+          {/* Products Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product, index) => (
               <a 
@@ -41,13 +41,13 @@ export function Shop() {
                 </div>
                 
                 {/* Product Info */}
-                <h3 className="text-lg font-semibold text-primary group-hover:text-primary/80 transition-colors mb-1">
+                <h3 className="text-base font-semibold text-primary group-hover:text-primary/80 transition-colors mb-1">
                   {product.name}
                 </h3>
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">
-                  {product.description.slice(0, 60)}...
+                  {product.description.slice(0, 50)}...
                 </p>
-                <span className="text-lg font-bold text-primary">
+                <span className="text-base font-bold text-primary">
                   {product.price} zł
                 </span>
               </a>
@@ -57,7 +57,7 @@ export function Shop() {
           {/* CTA Button */}
           <div className="text-center pt-4">
             <a href={EXTERNAL_SHOP_URL} target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="px-8 py-6 text-base font-semibold">
+              <Button size="lg" className="px-8">
                 Zobacz pełną ofertę
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
