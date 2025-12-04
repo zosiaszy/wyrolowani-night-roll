@@ -53,22 +53,25 @@ export function Gallery() {
             }}
             className="w-full"
           >
-            <CarouselContent className="-ml-2 md:-ml-4">
+            <CarouselContent className="-ml-3 md:-ml-6">
               {galleryImages.map((image, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
-                  <div className="group relative overflow-hidden rounded-2xl ring-2 ring-border/50 hover:ring-primary/80 transition-all duration-500 bg-card">
-                    <div className="aspect-[4/3] overflow-hidden">
+                <CarouselItem key={index} className="pl-3 md:pl-6 basis-full sm:basis-1/2">
+                  <div 
+                    className="group border border-primary/20 rounded-lg p-2 sm:p-3 md:p-4 hover:border-primary/50 transition-all duration-300 bg-card"
+                    style={{ 
+                      boxShadow: '0 0 15px hsl(var(--primary) / 0.1)'
+                    }}
+                  >
+                    <div className="aspect-[4/3] overflow-hidden rounded-lg">
                       <img
                         src={image.src}
                         alt={image.alt}
-                        className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+                        className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
                       />
                     </div>
-                    <div className="p-4 border-t border-border/50">
-                      <p className="text-sm text-muted-foreground text-center font-medium">
-                        {image.alt}
-                      </p>
-                    </div>
+                    <p className="text-sm md:text-base text-muted-foreground text-center font-medium mt-3 md:mt-4">
+                      {image.alt}
+                    </p>
                   </div>
                 </CarouselItem>
               ))}

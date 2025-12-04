@@ -86,7 +86,7 @@ export function Shop() {
                   }}
                 >
                   {/* Product Image */}
-                  <div className="aspect-square overflow-hidden rounded-lg mb-2 md:mb-4">
+                  <div className="aspect-[4/5] overflow-hidden rounded-lg mb-2 md:mb-4">
                     <img
                       src={product.image}
                       alt={product.name}
@@ -140,7 +140,7 @@ export function Shop() {
                   }}
                 >
                   {/* Product Image */}
-                  <div className="aspect-square overflow-hidden rounded-lg mb-2 md:mb-4">
+                  <div className="aspect-[4/5] overflow-hidden rounded-lg mb-2 md:mb-4">
                     <img
                       src={product.image}
                       alt={product.name}
