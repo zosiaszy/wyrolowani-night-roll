@@ -48,14 +48,12 @@ export function Header() {
       <div className="container mx-auto px-4 py-1">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
-            <div className="h-[90px] w-[90px] rounded-full overflow-hidden transition-all duration-500 group-hover:scale-110">
-              <img
-                src={logoImg}
-                alt="Wyrolowani – logo"
-                className="h-full w-full object-contain bg-transparent"
-              />
-            </div>
+          <Link to="/" className="flex items-center group">
+            <img
+              src={logoImg}
+              alt="Wyrolowani – logo"
+              className="h-16 w-16 object-contain transition-transform duration-500 group-hover:scale-110"
+            />
           </Link>
 
           {/* Desktop Navigation */}
