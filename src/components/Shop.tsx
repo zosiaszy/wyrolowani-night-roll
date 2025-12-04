@@ -1,10 +1,10 @@
 import { ArrowRight, ShoppingBag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-// Używamy istniejących zdjęć jako placeholder - do wymiany na prawdziwe zdjęcia produktów
+// Zdjęcia produktów
 import hoodieImg from '@/assets/product-hoodie.jpg';
 import longsleveImg from '@/assets/product-longsleeve.jpg';
-import joggersImg from '@/assets/product-joggers.jpg';
+import tshirtWhiteImg from '@/assets/product-tshirt-white.jpg';
 
 const EXTERNAL_SHOP_URL = 'https://wyrolowani.cyberstores.pl/';
 const HOODIES_URL = 'https://wyrolowani.cyberstores.pl/kategoria-produktu/bluzy/';
@@ -32,14 +32,14 @@ const tshirts = [
     id: 'tshirt-white',
     name: 'Koszulka Wyrolowani Biała',
     price: 99,
-    image: joggersImg,
+    image: tshirtWhiteImg,
     categoryUrl: TSHIRTS_URL,
   },
   {
     id: 'tshirt-black',
     name: 'Koszulka Wyrolowani Czarna',
     price: 99,
-    image: hoodieImg,
+    image: tshirtWhiteImg,
     categoryUrl: TSHIRTS_URL,
   },
 ];
