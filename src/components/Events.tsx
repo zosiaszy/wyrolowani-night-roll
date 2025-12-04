@@ -1,4 +1,4 @@
-import { ArrowUpRight, AlertTriangle, Lock, Sparkles, Zap, Star, Users } from 'lucide-react';
+import { ArrowUpRight, AlertTriangle, Lock, Sparkles, Zap, Star, Users, Facebook } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
@@ -91,7 +91,7 @@ export function Events() {
                 </div>
                 <p className="text-sm text-muted-foreground mt-2 flex items-center gap-2">
                   <Users className="h-4 w-4 text-primary" />
-                  Śledź nas na bieżąco na <a href="https://www.facebook.com/wyrolowani" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline ml-1">Facebooku</a>!
+                  Śledź nas na bieżąco na <a href="https://www.facebook.com/wyrolowani" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline ml-1 inline-flex items-center gap-1"><Facebook className="h-4 w-4" />Facebooku</a>!
                 </p>
               </div>
             </div>
