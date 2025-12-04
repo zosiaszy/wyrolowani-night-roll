@@ -26,7 +26,7 @@ export function Hero() {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 relative z-10 flex-1 flex items-center pt-24 md:pt-32 pb-32 md:pb-48">
+      <div className="container mx-auto px-4 relative z-10 flex-1 flex items-center pt-36 md:pt-44 pb-32 md:pb-48">
         <div className="max-w-4xl mx-auto text-center space-y-4 md:space-y-6 animate-fade-in-up">
           {/* Main Heading - bold elegant with enhanced glow */}
           <h1 
@@ -41,10 +41,15 @@ export function Hero() {
 
           {/* Subtitle - enhanced visibility with stronger glow */}
           <p 
+            className="text-sm sm:text-base md:text-lg text-foreground max-w-2xl mx-auto leading-relaxed font-semibold tracking-wide px-4 whitespace-nowrap"
+            style={{ textShadow: '0 0 20px hsl(35 25% 65% / 0.6), 0 0 40px hsl(35 25% 60% / 0.3)' }}
+          >
+            Dołącz do społeczności rolkarzy, którzy pokochali nocne miasto.
+          </p>
+          <p 
             className="text-sm sm:text-base md:text-lg text-foreground max-w-xl mx-auto leading-relaxed font-semibold tracking-wide px-4"
             style={{ textShadow: '0 0 20px hsl(35 25% 65% / 0.6), 0 0 40px hsl(35 25% 60% / 0.3)' }}
           >
-            Dołącz do społeczności rolkarzy, którzy pokochali nocne miasto.<br className="hidden sm:block" />
             Muzyka, energia i bezpieczna jazda w kolumnie.
           </p>
 
