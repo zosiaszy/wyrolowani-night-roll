@@ -31,9 +31,9 @@ export function Events() {
               </Badge>
             </div>
             
-            <div className="grid lg:grid-cols-2 gap-4 md:gap-6 items-center">
+            <div className="grid lg:grid-cols-[auto_1fr] gap-2 items-center">
               {/* Facebook Video Embed - Bigger */}
-              <div className="aspect-[9/16] max-h-[600px] rounded-lg overflow-hidden bg-background/50">
+              <div className="aspect-[9/16] w-[280px] md:w-[320px] max-h-[550px] rounded-lg overflow-hidden bg-background/50">
                 <iframe
                   src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1197874765577453&show_text=false"
                   width="100%"
