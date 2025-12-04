@@ -63,10 +63,10 @@ interface ProductCardProps {
 function ProductCard({ product, index }: ProductCardProps) {
   return (
     <div
-      className="group animate-fade-in-up border border-primary/20 rounded-xl p-4 md:p-5 hover:border-primary/50 transition-all duration-300 bg-card/30 backdrop-blur-sm"
+      className="group animate-fade-in-up border border-primary/50 rounded-xl p-4 md:p-5 hover:border-primary transition-all duration-300 bg-card/30 backdrop-blur-sm"
       style={{ 
         animationDelay: `${index * 0.1}s`,
-        boxShadow: '0 0 20px hsl(var(--primary) / 0.15)'
+        boxShadow: '0 0 25px hsl(35 25% 60% / 0.2), inset 0 0 20px hsl(35 25% 60% / 0.03)'
       }}
     >
       {/* Product Image */}

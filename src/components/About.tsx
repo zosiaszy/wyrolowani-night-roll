@@ -17,7 +17,10 @@ export function About() {
           </div>
 
           {/* Main Description Card */}
-          <div className="border border-border rounded-xl p-8 md:p-10 space-y-6 animate-fade-in-up bg-card/30">
+          <div 
+            className="border border-primary/50 rounded-xl p-8 md:p-10 space-y-6 animate-fade-in-up bg-card/30 hover:border-primary transition-all duration-300"
+            style={{ boxShadow: '0 0 25px hsl(35 25% 60% / 0.2), inset 0 0 20px hsl(35 25% 60% / 0.03)' }}
+          >
             <h3 className="text-2xl font-bold font-heading">Nasza misja</h3>
             <p className="text-muted-foreground leading-relaxed">
               Wyrolowani to projekt, który promuje aktywność fizyczną i zdrowy tryb życia poprzez nocne przejazdy 
@@ -32,7 +35,10 @@ export function About() {
 
           {/* Benefits Grid - Only 2 cards like in screenshot */}
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="border border-border rounded-xl p-8 space-y-4 animate-fade-in bg-card/30">
+            <div 
+              className="border border-primary/50 rounded-xl p-8 space-y-4 animate-fade-in bg-card/30 hover:border-primary transition-all duration-300"
+              style={{ boxShadow: '0 0 25px hsl(35 25% 60% / 0.2), inset 0 0 20px hsl(35 25% 60% / 0.03)' }}
+            >
               <Users className="h-10 w-10 text-primary" />
               <h3 className="text-xl font-bold font-heading">Społeczność</h3>
               <ul className="space-y-2 text-muted-foreground text-sm">
@@ -51,7 +57,10 @@ export function About() {
               </ul>
             </div>
 
-            <div className="border border-border rounded-xl p-8 space-y-4 animate-fade-in bg-card/30">
+            <div 
+              className="border border-primary/50 rounded-xl p-8 space-y-4 animate-fade-in bg-card/30 hover:border-primary transition-all duration-300"
+              style={{ boxShadow: '0 0 25px hsl(35 25% 60% / 0.2), inset 0 0 20px hsl(35 25% 60% / 0.03)' }}
+            >
               <Heart className="h-10 w-10 text-primary" />
               <h3 className="text-xl font-bold font-heading">Zdrowie</h3>
               <ul className="space-y-2 text-muted-foreground text-sm">
