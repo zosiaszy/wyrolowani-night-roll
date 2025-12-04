@@ -1,6 +1,6 @@
 import { ArrowRight, Shield, Music, ShoppingBag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import heroImg from '@/assets/hero-nightskating-bokeh.jpg';
+import heroImg from '@/assets/hero-rollerskates-closeup.jpg';
 
 export function Hero() {
   const scrollToSection = (id: string) => {
@@ -11,23 +11,23 @@ export function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with overlay */}
+    <section className="relative min-h-screen flex flex-col overflow-hidden">
+      {/* Background Image */}
       <div 
         className="absolute inset-0 z-0"
         style={{
           backgroundImage: `url(${heroImg})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'center 70%',
         }}
       >
-        <div className="absolute inset-0 bg-background/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background/80"></div>
       </div>
 
-      {/* Content */}
-      <div className="container mx-auto px-4 relative z-10 pt-20">
+      {/* Main Content - positioned higher */}
+      <div className="container mx-auto px-4 relative z-10 flex-1 flex items-center pt-20 pb-48">
         <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade-in-up">
-          {/* Main Heading - exactly like reference */}
+          {/* Main Heading */}
           <h1 className="font-heading leading-[0.95]">
             <span className="block text-primary italic text-6xl md:text-7xl lg:text-8xl">Wyrolowani</span>
             <span className="block text-primary italic font-normal text-3xl md:text-4xl lg:text-5xl mt-3">
@@ -41,7 +41,7 @@ export function Hero() {
             Muzyka, energia i bezpieczna jazda w kolumnie.
           </p>
 
-          {/* CTA Buttons - matching reference style */}
+          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center pt-4">
             <Button
               size="lg"
@@ -62,10 +62,14 @@ export function Hero() {
               </Button>
             </a>
           </div>
+        </div>
+      </div>
 
-          {/* Feature Cards - matching reference exactly */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-16 max-w-4xl mx-auto">
-            <div className="flex flex-col items-center text-center space-y-3 p-6 rounded-lg border border-border/30 bg-background/20 backdrop-blur-sm">
+      {/* Feature Cards - at very bottom, not covering skates */}
+      <div className="relative z-10 pb-16">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            <div className="flex flex-col items-center text-center space-y-3 p-6 rounded-lg border border-border/30 bg-background/30 backdrop-blur-sm">
               <Shield className="h-5 w-5 text-primary" strokeWidth={1.5} />
               <h3 className="font-semibold text-sm">Bezpieczne przejazdy</h3>
               <p className="text-xs text-muted-foreground">
@@ -73,7 +77,7 @@ export function Hero() {
               </p>
             </div>
 
-            <div className="flex flex-col items-center text-center space-y-3 p-6 rounded-lg border border-border/30 bg-background/20 backdrop-blur-sm">
+            <div className="flex flex-col items-center text-center space-y-3 p-6 rounded-lg border border-border/30 bg-background/30 backdrop-blur-sm">
               <Music className="h-5 w-5 text-primary" strokeWidth={1.5} />
               <h3 className="font-semibold text-sm">Atmosfera nocnego miasta</h3>
               <p className="text-xs text-muted-foreground">
@@ -81,7 +85,7 @@ export function Hero() {
               </p>
             </div>
 
-            <div className="flex flex-col items-center text-center space-y-3 p-6 rounded-lg border border-border/30 bg-background/20 backdrop-blur-sm">
+            <div className="flex flex-col items-center text-center space-y-3 p-6 rounded-lg border border-border/30 bg-background/30 backdrop-blur-sm">
               <ShoppingBag className="h-5 w-5 text-primary" strokeWidth={1.5} />
               <h3 className="font-semibold text-sm">Merch dla wyrolowanych</h3>
               <p className="text-xs text-muted-foreground">
@@ -90,13 +94,13 @@ export function Hero() {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Scroll Indicator - chevron like in reference */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce z-20">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-muted-foreground">
-          <path d="M6 9l6 6 6-6"/>
-        </svg>
+        
+        {/* Scroll Indicator */}
+        <div className="flex justify-center pt-6 animate-bounce">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-muted-foreground">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </div>
       </div>
     </section>
   );
