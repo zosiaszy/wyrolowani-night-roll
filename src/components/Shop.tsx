@@ -13,9 +13,7 @@ import hoodieBlackImg from '@/assets/product-hoodie-black.jpg';
 import tshirtWhiteImg from '@/assets/product-tshirt-white.jpg';
 import tshirtBlackImg from '@/assets/product-tshirt-black.jpg';
 
-const EXTERNAL_SHOP_URL = 'https://wyrolowani.cyberstores.pl/';
-const HOODIES_URL = 'https://wyrolowani.cyberstores.pl/kategoria-produktu/bluzy/';
-const TSHIRTS_URL = 'https://wyrolowani.cyberstores.pl/kategoria-produktu/koszulki/';
+const SHOP_URL = 'https://wyrolowani.cyberstores.pl/sklep/';
 
 const hoodies = [
   {
@@ -24,7 +22,6 @@ const hoodies = [
     description: 'Wygodna bluza z kapturem, idealna na nocne przejazdy',
     price: 189,
     image: hoodieWhiteImg,
-    categoryUrl: HOODIES_URL,
   },
   {
     id: 'hoodie-black',
@@ -32,7 +29,6 @@ const hoodies = [
     description: 'Klasyczna czerń z charakterem nightskatera',
     price: 189,
     image: hoodieBlackImg,
-    categoryUrl: HOODIES_URL,
   },
 ];
 
@@ -43,7 +39,6 @@ const tshirts = [
     description: 'Lekka koszulka na letnie rolkowanie',
     price: 99,
     image: tshirtWhiteImg,
-    categoryUrl: TSHIRTS_URL,
   },
   {
     id: 'tshirt-black',
@@ -51,7 +46,6 @@ const tshirts = [
     description: 'Streetwearowy styl dla prawdziwych rolkarzy',
     price: 99,
     image: tshirtBlackImg,
-    categoryUrl: TSHIRTS_URL,
   },
 ];
 
@@ -62,7 +56,6 @@ interface ProductCardProps {
     description: string;
     price: number;
     image: string;
-    categoryUrl: string;
   };
   index: number;
 }
@@ -103,7 +96,7 @@ function ProductCard({ product, index }: ProductCardProps) {
           <Tooltip delayDuration={200}>
             <TooltipTrigger asChild>
               <a 
-                href={product.categoryUrl} 
+                href={SHOP_URL} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="block"
@@ -155,7 +148,7 @@ export function Shop() {
               <h3 className="text-lg sm:text-xl md:text-2xl font-heading font-semibold text-primary text-glow">
                 Bluzy
               </h3>
-              <a href={HOODIES_URL} target="_blank" rel="noopener noreferrer">
+              <a href={SHOP_URL} target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="sm" className="border-primary/30 hover:border-primary text-glow text-xs">
                   <span className="hidden sm:inline">Zobacz wszystkie</span>
                   <span className="sm:hidden">Więcej</span>
@@ -176,7 +169,7 @@ export function Shop() {
               <h3 className="text-lg sm:text-xl md:text-2xl font-heading font-semibold text-primary text-glow">
                 Koszulki
               </h3>
-              <a href={TSHIRTS_URL} target="_blank" rel="noopener noreferrer">
+              <a href={SHOP_URL} target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="sm" className="border-primary/30 hover:border-primary text-glow text-xs">
                   <span className="hidden sm:inline">Zobacz wszystkie</span>
                   <span className="sm:hidden">Więcej</span>
@@ -193,7 +186,7 @@ export function Shop() {
 
           {/* CTA Button */}
           <div className="text-center pt-2 md:pt-4">
-            <a href={EXTERNAL_SHOP_URL} target="_blank" rel="noopener noreferrer">
+            <a href={SHOP_URL} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="px-6 md:px-8 text-glow text-sm md:text-base">
                 Zobacz pełną ofertę
                 <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
