@@ -1,4 +1,5 @@
-import { Facebook } from 'lucide-react';
+import { useState } from 'react';
+import { Facebook, ChevronDown, ChevronUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Carousel,
@@ -27,6 +28,115 @@ const galleryImages = [
 
 const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=61567243250556';
 
+function GalleryImage({ image, index }: { image: typeof galleryImages[0]; index: number }) {
+  return (
+    <div 
+      className="group border border-primary/20 rounded-lg p-2 sm:p-3 md:p-4 hover:border-primary/50 transition-all duration-300 bg-card"
+      style={{ 
+        boxShadow: '0 0 15px hsl(var(--primary) / 0.1)',
+        animationDelay: `${index * 0.1}s`
+      }}
+    >
+      <div className="aspect-[4/3] overflow-hidden rounded-lg">
+        <img
+          src={image.src}
+          alt={image.alt}
+          className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+        />
+      </div>
+      <p className="text-sm md:text-base text-muted-foreground text-center font-medium mt-3 md:mt-4">
+        {image.alt}
+      </p>
+    </div>
+  );
+}
+
+// Desktop Gallery with expand/collapse
+function DesktopGallery() {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const visibleImages = isExpanded ? galleryImages : galleryImages.slice(0, 4);
+  const hiddenCount = galleryImages.length - 4;
+
+  return (
+    <div className="hidden md:block space-y-6">
+      <div className="grid grid-cols-2 gap-6">
+        {visibleImages.map((image, index) => (
+          <div key={index} className="animate-fade-in-up">
+            <GalleryImage image={image} index={index} />
+          </div>
+        ))}
+      </div>
+      
+      {hiddenCount > 0 && (
+        <div className="text-center pt-4">
+          <Button
+            variant="outline"
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="gap-2 border-primary/50 hover:bg-primary hover:text-primary-foreground"
+          >
+            {isExpanded ? (
+              <>
+                <ChevronUp className="h-4 w-4" />
+                Zwiń galerię
+              </>
+            ) : (
+              <>
+                <ChevronDown className="h-4 w-4" />
+                Rozwiń ({hiddenCount} więcej)
+              </>
+            )}
+          </Button>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// Mobile Carousel with dots
+function MobileGallery() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  return (
+    <div className="md:hidden">
+      <Carousel
+        opts={{
+          align: 'center',
+          loop: true,
+        }}
+        className="w-full"
+        setApi={(api) => {
+          api?.on('select', () => {
+            setCurrentIndex(api.selectedScrollSnap());
+          });
+        }}
+      >
+        <CarouselContent>
+          {galleryImages.map((image, index) => (
+            <CarouselItem key={index} className="basis-full">
+              <GalleryImage image={image} index={index} />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
+      
+      {/* Dots indicator */}
+      <div className="flex justify-center gap-2 mt-4">
+        {galleryImages.map((_, index) => (
+          <button
+            key={index}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              index === currentIndex 
+                ? 'bg-primary w-4' 
+                : 'bg-primary/30 hover:bg-primary/50'
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export function Gallery() {
   return (
     <section id="gallery" className="py-20 md:py-32 relative overflow-hidden bg-muted/20">
@@ -45,40 +155,11 @@ export function Gallery() {
             </p>
           </div>
 
-          {/* Gallery Carousel */}
-          <Carousel
-            opts={{
-              align: 'start',
-              loop: true,
-            }}
-            className="w-full"
-          >
-            <CarouselContent className="-ml-3 md:-ml-6">
-              {galleryImages.map((image, index) => (
-                <CarouselItem key={index} className="pl-3 md:pl-6 basis-full sm:basis-1/2">
-                  <div 
-                    className="group border border-primary/20 rounded-lg p-2 sm:p-3 md:p-4 hover:border-primary/50 transition-all duration-300 bg-card"
-                    style={{ 
-                      boxShadow: '0 0 15px hsl(var(--primary) / 0.1)'
-                    }}
-                  >
-                    <div className="aspect-[4/3] overflow-hidden rounded-lg">
-                      <img
-                        src={image.src}
-                        alt={image.alt}
-                        className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
-                      />
-                    </div>
-                    <p className="text-sm md:text-base text-muted-foreground text-center font-medium mt-3 md:mt-4">
-                      {image.alt}
-                    </p>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden sm:flex -left-4 md:-left-6 bg-background/80 border-border hover:bg-primary hover:text-primary-foreground" />
-            <CarouselNext className="hidden sm:flex -right-4 md:-right-6 bg-background/80 border-border hover:bg-primary hover:text-primary-foreground" />
-          </Carousel>
+          {/* Desktop: Grid with expand */}
+          <DesktopGallery />
+          
+          {/* Mobile: Carousel with dots */}
+          <MobileGallery />
 
           {/* Facebook Link */}
           <div className="text-center animate-fade-in pt-4">

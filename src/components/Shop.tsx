@@ -45,6 +45,54 @@ const tshirts = [
   },
 ];
 
+interface ProductCardProps {
+  product: {
+    id: string;
+    name: string;
+    price: number;
+    image: string;
+    categoryUrl: string;
+  };
+  index: number;
+}
+
+function ProductCard({ product, index }: ProductCardProps) {
+  return (
+    <div
+      className="group animate-fade-in-up border border-primary/20 rounded-lg p-3 md:p-4 hover:border-primary/50 transition-all duration-300"
+      style={{ 
+        animationDelay: `${index * 0.1}s`,
+        boxShadow: '0 0 15px hsl(var(--primary) / 0.1)'
+      }}
+    >
+      {/* Product Image */}
+      <div className="aspect-[4/5] overflow-hidden rounded-lg mb-3 md:mb-4">
+        <img
+          src={product.image}
+          alt={product.name}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+      </div>
+      
+      {/* Product Info */}
+      <h4 className="text-sm md:text-lg font-semibold text-primary group-hover:text-primary/80 transition-colors mb-2 text-glow line-clamp-2">
+        {product.name}
+      </h4>
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+        <span className="text-lg md:text-xl font-bold text-primary">
+          {product.price} zł
+        </span>
+        <a href={product.categoryUrl} target="_blank" rel="noopener noreferrer">
+          <Button size="sm" className="text-glow w-full sm:w-auto text-sm py-2">
+            <ShoppingBag className="mr-2 h-4 w-4" />
+            Kup teraz
+          </Button>
+        </a>
+      </div>
+    </div>
+  );
+}
+
 export function Shop() {
   return (
     <section id="shop" className="py-16 md:py-24 relative">
@@ -75,42 +123,10 @@ export function Shop() {
                 </Button>
               </a>
             </div>
-            <div className="grid grid-cols-2 gap-3 md:gap-8">
+            {/* 1 column on mobile, 2 on tablet+ */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8">
               {hoodies.map((product, index) => (
-                <div
-                  key={product.id}
-                  className="group animate-fade-in-up border border-primary/20 rounded-lg p-2 sm:p-3 md:p-4 hover:border-primary/50 transition-all duration-300"
-                  style={{ 
-                    animationDelay: `${index * 0.1}s`,
-                    boxShadow: '0 0 15px hsl(var(--primary) / 0.1)'
-                  }}
-                >
-                  {/* Product Image */}
-                  <div className="aspect-[4/5] overflow-hidden rounded-lg mb-2 md:mb-4">
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                  
-                  {/* Product Info */}
-                  <h4 className="text-xs sm:text-sm md:text-lg font-semibold text-primary group-hover:text-primary/80 transition-colors mb-1 md:mb-2 text-glow line-clamp-2">
-                    {product.name}
-                  </h4>
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                    <span className="text-sm sm:text-lg md:text-xl font-bold text-primary">
-                      {product.price} zł
-                    </span>
-                    <a href={product.categoryUrl} target="_blank" rel="noopener noreferrer">
-                      <Button size="sm" className="text-glow w-full sm:w-auto text-xs md:text-sm py-1 md:py-2">
-                        <ShoppingBag className="mr-1 md:mr-2 h-3 w-3 md:h-4 md:w-4" />
-                        <span className="hidden sm:inline">Kup teraz</span>
-                        <span className="sm:hidden">Kup</span>
-                      </Button>
-                    </a>
-                  </div>
-                </div>
+                <ProductCard key={product.id} product={product} index={index} />
               ))}
             </div>
           </div>
@@ -129,42 +145,10 @@ export function Shop() {
                 </Button>
               </a>
             </div>
-            <div className="grid grid-cols-2 gap-3 md:gap-8">
+            {/* 1 column on mobile, 2 on tablet+ */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8">
               {tshirts.map((product, index) => (
-                <div
-                  key={product.id}
-                  className="group animate-fade-in-up border border-primary/20 rounded-lg p-2 sm:p-3 md:p-4 hover:border-primary/50 transition-all duration-300"
-                  style={{ 
-                    animationDelay: `${index * 0.1}s`,
-                    boxShadow: '0 0 15px hsl(var(--primary) / 0.1)'
-                  }}
-                >
-                  {/* Product Image */}
-                  <div className="aspect-[4/5] overflow-hidden rounded-lg mb-2 md:mb-4">
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                  
-                  {/* Product Info */}
-                  <h4 className="text-xs sm:text-sm md:text-lg font-semibold text-primary group-hover:text-primary/80 transition-colors mb-1 md:mb-2 text-glow line-clamp-2">
-                    {product.name}
-                  </h4>
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                    <span className="text-sm sm:text-lg md:text-xl font-bold text-primary">
-                      {product.price} zł
-                    </span>
-                    <a href={product.categoryUrl} target="_blank" rel="noopener noreferrer">
-                      <Button size="sm" className="text-glow w-full sm:w-auto text-xs md:text-sm py-1 md:py-2">
-                        <ShoppingBag className="mr-1 md:mr-2 h-3 w-3 md:h-4 md:w-4" />
-                        <span className="hidden sm:inline">Kup teraz</span>
-                        <span className="sm:hidden">Kup</span>
-                      </Button>
-                    </a>
-                  </div>
-                </div>
+                <ProductCard key={product.id} product={product} index={index} />
               ))}
             </div>
           </div>

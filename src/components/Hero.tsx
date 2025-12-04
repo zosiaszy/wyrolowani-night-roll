@@ -12,20 +12,21 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen flex flex-col overflow-hidden">
-      {/* Background Image - softer overlay for less contrast */}
+      {/* Background Image - adjusted for mobile */}
       <div 
         className="absolute inset-0 z-0"
         style={{
           backgroundImage: `url(${heroImg})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center 70%',
+          backgroundPosition: 'center 60%',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/70"></div>
+        {/* Stronger overlay on mobile for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/80 md:from-background/60 md:via-background/40 md:to-background/70"></div>
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 relative z-10 flex-1 flex items-center pt-20 md:pt-32 pb-32 md:pb-48">
+      <div className="container mx-auto px-4 relative z-10 flex-1 flex items-center pt-24 md:pt-32 pb-32 md:pb-48">
         <div className="max-w-4xl mx-auto text-center space-y-4 md:space-y-6 animate-fade-in-up">
           {/* Main Heading - bold elegant, responsive */}
           <h1 
@@ -37,7 +38,7 @@ export function Hero() {
 
           {/* Subtitle - matching nav style with glow */}
           <p 
-            className="text-xs sm:text-sm md:text-base text-foreground/80 max-w-xl mx-auto leading-relaxed font-medium tracking-wide px-4"
+            className="text-xs sm:text-sm md:text-base text-foreground/90 max-w-xl mx-auto leading-relaxed font-medium tracking-wide px-4"
             style={{ textShadow: '0 0 15px hsl(35 25% 60% / 0.4)' }}
           >
             Dołącz do społeczności rolkarzy, którzy pokochali nocne miasto.<br className="hidden sm:block" />
@@ -73,7 +74,7 @@ export function Hero() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 max-w-4xl mx-auto">
             <div 
-              className="flex flex-col items-center text-center space-y-2 md:space-y-3 p-4 md:p-6 rounded-lg border border-primary/40 bg-background/30 backdrop-blur-sm transition-all hover:border-primary/60"
+              className="flex flex-col items-center text-center space-y-2 md:space-y-3 p-4 md:p-6 rounded-lg border border-primary/40 bg-background/50 backdrop-blur-sm transition-all hover:border-primary/60"
               style={{ boxShadow: '0 0 15px hsl(35 25% 60% / 0.15), inset 0 0 15px hsl(35 25% 60% / 0.03)' }}
             >
               <Shield className="h-4 w-4 md:h-5 md:w-5 text-primary" strokeWidth={1.5} />
@@ -89,7 +90,7 @@ export function Hero() {
             </div>
 
             <div 
-              className="flex flex-col items-center text-center space-y-2 md:space-y-3 p-4 md:p-6 rounded-lg border border-primary/40 bg-background/30 backdrop-blur-sm transition-all hover:border-primary/60"
+              className="flex flex-col items-center text-center space-y-2 md:space-y-3 p-4 md:p-6 rounded-lg border border-primary/40 bg-background/50 backdrop-blur-sm transition-all hover:border-primary/60"
               style={{ boxShadow: '0 0 15px hsl(35 25% 60% / 0.15), inset 0 0 15px hsl(35 25% 60% / 0.03)' }}
             >
               <Music className="h-4 w-4 md:h-5 md:w-5 text-primary" strokeWidth={1.5} />
@@ -105,7 +106,7 @@ export function Hero() {
             </div>
 
             <div 
-              className="flex flex-col items-center text-center space-y-2 md:space-y-3 p-4 md:p-6 rounded-lg border border-primary/40 bg-background/30 backdrop-blur-sm transition-all hover:border-primary/60"
+              className="flex flex-col items-center text-center space-y-2 md:space-y-3 p-4 md:p-6 rounded-lg border border-primary/40 bg-background/50 backdrop-blur-sm transition-all hover:border-primary/60"
               style={{ boxShadow: '0 0 15px hsl(35 25% 60% / 0.15), inset 0 0 15px hsl(35 25% 60% / 0.03)' }}
             >
               <ShoppingBag className="h-4 w-4 md:h-5 md:w-5 text-primary" strokeWidth={1.5} />
