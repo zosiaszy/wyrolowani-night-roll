@@ -55,15 +55,16 @@ export function Hero() {
               Sprawdź przejazdy
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              onClick={() => scrollToSection('shop')}
-              className="group border-2 border-foreground/30 bg-background/40 hover:bg-foreground/10 hover:border-foreground/60 backdrop-blur-sm px-7 py-5 text-base font-semibold shadow-lg"
-            >
-              Wejdź do sklepu
-              <ShoppingBag className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-            </Button>
+            <a href="https://wyrolowani.cyberstores.pl/" target="_blank" rel="noopener noreferrer">
+              <Button
+                size="lg"
+                variant="outline"
+                className="group border-2 border-foreground/30 bg-background/40 hover:bg-foreground/10 hover:border-foreground/60 backdrop-blur-sm px-7 py-5 text-base font-semibold shadow-lg"
+              >
+                Wejdź do sklepu
+                <ShoppingBag className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+              </Button>
+            </a>
           </div>
 
           {/* Feature Highlights */}
