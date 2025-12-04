@@ -1,12 +1,13 @@
-import { Heart } from 'lucide-react';
 import logoImg from '@/assets/logo-wyrolowani.png';
+
 export function Footer() {
-  return <footer className="border-t border-border bg-card/30 backdrop-blur-sm">
+  return (
+    <footer className="border-t border-border bg-card/30 backdrop-blur-sm">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {/* Logo & Description */}
           <div className="space-y-4">
-            <div className="h-24 w-24 rounded-full overflow-hidden transition-all duration-300 hover:scale-105">
+            <div className="h-32 w-32 rounded-full overflow-hidden transition-all duration-300 hover:scale-105">
               <img src={logoImg} alt="Wyrolowani – logo" className="h-full w-full object-contain bg-transparent" />
             </div>
             <p className="text-sm text-muted-foreground">
@@ -40,36 +41,13 @@ export function Footer() {
               </li>
             </ul>
           </div>
-
-          {/* Legal */}
-          <div className="space-y-4">
-            <h3 className="font-semibold text-foreground">Informacje</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>
-                <a href="#" className="hover:text-primary transition-colors story-link text-glow">
-                  Regulamin przejazdów
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-secondary transition-colors story-link text-glow">
-                  Polityka prywatności
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-accent transition-colors story-link text-glow">
-                  Warunki sklepu
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
-          <p className="flex items-center justify-center gap-2">
-            Stworzone z <Heart className="h-4 w-4 text-primary fill-primary animate-pulse" /> przez Wyrolowani © 2025
-          </p>
+          <p>© Wyrolowani 2025</p>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 }
