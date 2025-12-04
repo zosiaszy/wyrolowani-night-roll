@@ -24,19 +24,16 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background/80"></div>
       </div>
 
-      {/* Main Content - positioned higher */}
+      {/* Main Content */}
       <div className="container mx-auto px-4 relative z-10 flex-1 flex items-center pt-20 pb-48">
-        <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade-in-up">
-          {/* Main Heading */}
-          <h1 className="font-heading leading-[0.95]">
-            <span className="block text-primary italic text-6xl md:text-7xl lg:text-8xl">Wyrolowani</span>
-            <span className="block text-primary italic font-normal text-3xl md:text-4xl lg:text-5xl mt-3">
-              Nocna jazda<br />na rolkach
-            </span>
+        <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
+          {/* Main Heading - elegant uppercase */}
+          <h1 className="font-heading text-primary text-6xl md:text-8xl lg:text-9xl tracking-wide font-light">
+            WYROLOWANI
           </h1>
 
-          {/* Subtitle */}
-          <p className="text-sm md:text-base text-muted-foreground max-w-xl mx-auto leading-relaxed pt-2">
+          {/* Subtitle - bigger */}
+          <p className="text-lg md:text-xl lg:text-2xl text-foreground/90 max-w-2xl mx-auto leading-relaxed font-light">
             Dołącz do społeczności rolkarzy, którzy pokochali nocne miasto.<br />
             Muzyka, energia i bezpieczna jazda w kolumnie.
           </p>
@@ -65,30 +62,30 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Feature Cards - at very bottom, not covering skates */}
+      {/* Feature Cards */}
       <div className="relative z-10 pb-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
             <div className="flex flex-col items-center text-center space-y-3 p-6 rounded-lg border border-border/30 bg-background/30 backdrop-blur-sm">
-              <Shield className="h-5 w-5 text-primary" strokeWidth={1.5} />
-              <h3 className="font-semibold text-sm">Bezpieczne przejazdy</h3>
-              <p className="text-xs text-muted-foreground">
+              <Shield className="h-6 w-6 text-primary" strokeWidth={1.5} />
+              <h3 className="font-heading text-lg font-medium">Bezpieczne przejazdy</h3>
+              <p className="text-sm text-muted-foreground">
                 Kask, ochraniacze i bezpieczna trasa
               </p>
             </div>
 
             <div className="flex flex-col items-center text-center space-y-3 p-6 rounded-lg border border-border/30 bg-background/30 backdrop-blur-sm">
-              <Music className="h-5 w-5 text-primary" strokeWidth={1.5} />
-              <h3 className="font-semibold text-sm">Atmosfera nocnego miasta</h3>
-              <p className="text-xs text-muted-foreground">
+              <Music className="h-6 w-6 text-primary" strokeWidth={1.5} />
+              <h3 className="font-heading text-lg font-medium">Atmosfera nocnego miasta</h3>
+              <p className="text-sm text-muted-foreground">
                 Muzyka, światła i niezapomniane chwile
               </p>
             </div>
 
             <div className="flex flex-col items-center text-center space-y-3 p-6 rounded-lg border border-border/30 bg-background/30 backdrop-blur-sm">
-              <ShoppingBag className="h-5 w-5 text-primary" strokeWidth={1.5} />
-              <h3 className="font-semibold text-sm">Merch dla wyrolowanych</h3>
-              <p className="text-xs text-muted-foreground">
+              <ShoppingBag className="h-6 w-6 text-primary" strokeWidth={1.5} />
+              <h3 className="font-heading text-lg font-medium">Merch dla wyrolowanych</h3>
+              <p className="text-sm text-muted-foreground">
                 Oficjalny streetwear z neonowym stylem
               </p>
             </div>
