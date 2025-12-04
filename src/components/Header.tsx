@@ -33,13 +33,13 @@ export function Header() {
       }`}
     >
       <div className="container mx-auto px-4 py-1">
-        <div className="flex items-center justify-between h-16 md:h-24">
+        <div className="flex items-center justify-between h-20 md:h-32">
           {/* Logo - much bigger on desktop for readable text */}
           <Link to="/" className="flex items-center group">
             <img
               src={logoImg}
               alt="Wyrolowani – logo"
-              className="h-12 w-12 md:h-20 md:w-20 object-contain transition-transform duration-500 group-hover:scale-110"
+              className="h-14 w-14 md:h-28 md:w-28 object-contain transition-transform duration-500 group-hover:scale-110"
             />
           </Link>
 
