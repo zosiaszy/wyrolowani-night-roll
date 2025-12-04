@@ -5,25 +5,17 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from '@/components/ui/carousel';
 import gallery1 from '@/assets/gallery-1.jpg';
 import gallery2 from '@/assets/gallery-2.jpg';
 import gallery3 from '@/assets/gallery-3.jpg';
 import gallery4 from '@/assets/gallery-4.jpg';
-import gallery5 from '@/assets/gallery-5.jpg';
-import gallery6 from '@/assets/gallery-6.jpg';
-import gallery7 from '@/assets/gallery-7.jpg';
 
 const galleryImages = [
   { src: gallery1, alt: 'Zajęcia dla dzieci' },
   { src: gallery2, alt: 'Nocny przejazd z neonami' },
   { src: gallery3, alt: 'Uśmiechnięci rolkarze' },
   { src: gallery4, alt: 'Koszulki Night Skating' },
-  { src: gallery5, alt: 'Grupowe zdjęcie przy Auchan' },
-  { src: gallery6, alt: 'Przejazd przez miasto' },
-  { src: gallery7, alt: 'Rolki i koszulka' },
 ];
 
 const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=61567243250556';
@@ -51,43 +43,17 @@ function GalleryImage({ image, index }: { image: typeof galleryImages[0]; index:
   );
 }
 
-// Desktop Gallery with expand/collapse
+// Desktop Gallery - all 4 images visible
 function DesktopGallery() {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const visibleImages = isExpanded ? galleryImages : galleryImages.slice(0, 4);
-  const hiddenCount = galleryImages.length - 4;
-
   return (
-    <div className="hidden md:block space-y-6">
+    <div className="hidden md:block">
       <div className="grid grid-cols-2 gap-6">
-        {visibleImages.map((image, index) => (
+        {galleryImages.map((image, index) => (
           <div key={index} className="animate-fade-in-up">
             <GalleryImage image={image} index={index} />
           </div>
         ))}
       </div>
-      
-      {hiddenCount > 0 && (
-        <div className="text-center pt-4">
-          <Button
-            variant="outline"
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="gap-2 border-primary/50 hover:bg-primary hover:text-primary-foreground"
-          >
-            {isExpanded ? (
-              <>
-                <ChevronUp className="h-4 w-4" />
-                Zwiń galerię
-              </>
-            ) : (
-              <>
-                <ChevronDown className="h-4 w-4" />
-                Rozwiń ({hiddenCount} więcej)
-              </>
-            )}
-          </Button>
-        </div>
-      )}
     </div>
   );
 }
@@ -155,7 +121,7 @@ export function Gallery() {
             </p>
           </div>
 
-          {/* Desktop: Grid with expand */}
+          {/* Desktop: Grid */}
           <DesktopGallery />
           
           {/* Mobile: Carousel with dots */}
