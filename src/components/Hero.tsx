@@ -86,49 +86,49 @@ export function Hero() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 max-w-4xl mx-auto">
             <div 
-              className="flex flex-col items-center text-center space-y-2 md:space-y-3 p-4 md:p-6 rounded-lg border border-primary/40 bg-background/50 backdrop-blur-sm transition-all hover:border-primary/60"
-              style={{ boxShadow: '0 0 15px hsl(35 25% 60% / 0.15), inset 0 0 15px hsl(35 25% 60% / 0.03)' }}
+              className="group flex flex-col items-center text-center space-y-2 md:space-y-3 p-5 md:p-7 rounded-lg border border-primary/50 bg-background/50 backdrop-blur-sm transition-all duration-300 hover:border-primary hover:scale-105 hover:bg-background/60"
+              style={{ boxShadow: '0 0 25px hsl(35 25% 60% / 0.25), inset 0 0 20px hsl(35 25% 60% / 0.05)' }}
             >
-              <Shield className="h-4 w-4 md:h-5 md:w-5 text-primary" strokeWidth={1.5} />
+              <Shield className="h-6 w-6 md:h-8 md:w-8 text-primary transition-transform duration-300 group-hover:scale-110" strokeWidth={1.5} />
               <h3 
-                className="text-sm md:text-base font-bold tracking-wide"
-                style={{ textShadow: '0 0 12px hsl(35 25% 60% / 0.4)' }}
+                className="text-base md:text-lg font-bold tracking-wide"
+                style={{ textShadow: '0 0 15px hsl(35 25% 60% / 0.5)' }}
               >
                 Bezpieczne przejazdy
               </h3>
-              <p className="text-[10px] md:text-xs text-muted-foreground">
+              <p className="text-xs md:text-sm text-muted-foreground">
                 Kask, ochraniacze i bezpieczna trasa
               </p>
             </div>
 
             <div 
-              className="flex flex-col items-center text-center space-y-2 md:space-y-3 p-4 md:p-6 rounded-lg border border-primary/40 bg-background/50 backdrop-blur-sm transition-all hover:border-primary/60"
-              style={{ boxShadow: '0 0 15px hsl(35 25% 60% / 0.15), inset 0 0 15px hsl(35 25% 60% / 0.03)' }}
+              className="group flex flex-col items-center text-center space-y-2 md:space-y-3 p-5 md:p-7 rounded-lg border border-primary/50 bg-background/50 backdrop-blur-sm transition-all duration-300 hover:border-primary hover:scale-105 hover:bg-background/60"
+              style={{ boxShadow: '0 0 25px hsl(35 25% 60% / 0.25), inset 0 0 20px hsl(35 25% 60% / 0.05)' }}
             >
-              <Music className="h-4 w-4 md:h-5 md:w-5 text-primary" strokeWidth={1.5} />
+              <Music className="h-6 w-6 md:h-8 md:w-8 text-primary transition-transform duration-300 group-hover:scale-110" strokeWidth={1.5} />
               <h3 
-                className="text-sm md:text-base font-bold tracking-wide"
-                style={{ textShadow: '0 0 12px hsl(35 25% 60% / 0.4)' }}
+                className="text-base md:text-lg font-bold tracking-wide"
+                style={{ textShadow: '0 0 15px hsl(35 25% 60% / 0.5)' }}
               >
                 Atmosfera nocnego miasta
               </h3>
-              <p className="text-[10px] md:text-xs text-muted-foreground">
+              <p className="text-xs md:text-sm text-muted-foreground">
                 Muzyka, światła i niezapomniane chwile
               </p>
             </div>
 
             <div 
-              className="flex flex-col items-center text-center space-y-2 md:space-y-3 p-4 md:p-6 rounded-lg border border-primary/40 bg-background/50 backdrop-blur-sm transition-all hover:border-primary/60"
-              style={{ boxShadow: '0 0 15px hsl(35 25% 60% / 0.15), inset 0 0 15px hsl(35 25% 60% / 0.03)' }}
+              className="group flex flex-col items-center text-center space-y-2 md:space-y-3 p-5 md:p-7 rounded-lg border border-primary/50 bg-background/50 backdrop-blur-sm transition-all duration-300 hover:border-primary hover:scale-105 hover:bg-background/60"
+              style={{ boxShadow: '0 0 25px hsl(35 25% 60% / 0.25), inset 0 0 20px hsl(35 25% 60% / 0.05)' }}
             >
-              <ShoppingBag className="h-4 w-4 md:h-5 md:w-5 text-primary" strokeWidth={1.5} />
+              <ShoppingBag className="h-6 w-6 md:h-8 md:w-8 text-primary transition-transform duration-300 group-hover:scale-110" strokeWidth={1.5} />
               <h3 
-                className="text-sm md:text-base font-bold tracking-wide"
-                style={{ textShadow: '0 0 12px hsl(35 25% 60% / 0.4)' }}
+                className="text-base md:text-lg font-bold tracking-wide"
+                style={{ textShadow: '0 0 15px hsl(35 25% 60% / 0.5)' }}
               >
                 Merch dla wyrolowanych
               </h3>
-              <p className="text-[10px] md:text-xs text-muted-foreground">
+              <p className="text-xs md:text-sm text-muted-foreground">
                 Oficjalny streetwear z neonowym stylem
               </p>
             </div>
