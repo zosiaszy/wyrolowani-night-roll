@@ -7,7 +7,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row md:justify-between gap-8">
           {/* Logo & Description */}
           <div className="space-y-4">
-            <div className="h-16 w-16 md:h-32 md:w-32 rounded-full overflow-hidden transition-all duration-300 hover:scale-105">
+            <div className="h-14 w-14 md:h-24 md:w-24 rounded-full overflow-hidden transition-all duration-300 hover:scale-105">
               <img src={logoImg} alt="Wyrolowani – logo" className="h-full w-full object-contain bg-transparent" />
             </div>
             <p className="text-sm text-muted-foreground max-w-xs">
