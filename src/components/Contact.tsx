@@ -26,7 +26,10 @@ export function Contact() {
 
           <div className="space-y-6 animate-fade-in-up">
             {/* Contact Info */}
-            <div className="bg-card/50 backdrop-blur-sm border-2 border-border rounded-xl p-8 space-y-4 shadow-[var(--shadow-card)] ring-1 ring-secondary/30">
+            <div 
+              className="bg-card/50 backdrop-blur-sm border border-primary/50 rounded-xl p-8 space-y-4 hover:border-primary transition-all duration-300"
+              style={{ boxShadow: '0 0 25px hsl(35 25% 60% / 0.2), inset 0 0 20px hsl(35 25% 60% / 0.03)' }}
+            >
               <h3 className="text-2xl font-semibold flex items-center">
                 <Mail className="mr-2 h-6 w-6 text-secondary" />
                 Dane kontaktowe
@@ -49,7 +52,10 @@ export function Contact() {
             </div>
 
             {/* Social Media */}
-            <div className="bg-card/50 backdrop-blur-sm border-2 border-border rounded-xl p-8 space-y-4 shadow-[var(--shadow-card)] ring-1 ring-accent/30">
+            <div 
+              className="bg-card/50 backdrop-blur-sm border border-primary/50 rounded-xl p-8 space-y-4 hover:border-primary transition-all duration-300"
+              style={{ boxShadow: '0 0 25px hsl(35 25% 60% / 0.2), inset 0 0 20px hsl(35 25% 60% / 0.03)' }}
+            >
               <h3 className="text-2xl font-semibold">Social Media</h3>
               <p className="text-muted-foreground">
                 Śledź nas w social media, żeby być na bieżąco z nadchodzącymi eventami!
@@ -58,28 +64,31 @@ export function Contact() {
                 <Button 
                   variant="outline" 
                   size="icon" 
-                  className="group"
+                  className="group h-12 w-12"
                   asChild
                 >
                   <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
-                    <Instagram className="h-5 w-5 group-hover:text-accent transition-colors" />
+                    <Instagram className="h-7 w-7 group-hover:text-accent transition-colors" />
                   </a>
                 </Button>
                 <Button 
                   variant="outline" 
                   size="icon" 
-                  className="group"
+                  className="group h-12 w-12"
                   asChild
                 >
                   <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer">
-                    <Facebook className="h-5 w-5 group-hover:text-primary transition-colors" />
+                    <Facebook className="h-7 w-7 group-hover:text-primary transition-colors" />
                   </a>
                 </Button>
               </div>
             </div>
 
             {/* Shop Link */}
-            <div className="bg-card/50 backdrop-blur-sm border-2 border-border rounded-xl p-8 space-y-4 shadow-[var(--shadow-card)] ring-1 ring-primary/30">
+            <div 
+              className="bg-card/50 backdrop-blur-sm border border-primary/50 rounded-xl p-8 space-y-4 hover:border-primary transition-all duration-300"
+              style={{ boxShadow: '0 0 25px hsl(35 25% 60% / 0.2), inset 0 0 20px hsl(35 25% 60% / 0.03)' }}
+            >
               <h3 className="text-2xl font-semibold flex items-center">
                 <ShoppingBag className="mr-2 h-6 w-6 text-primary" />
                 Sklep
@@ -95,7 +104,10 @@ export function Contact() {
             </div>
 
             {/* Tip */}
-            <div className="bg-accent/10 border border-accent/30 rounded-xl p-6 space-y-2">
+            <div 
+              className="bg-accent/10 border border-primary/50 rounded-xl p-6 space-y-2 hover:border-primary transition-all duration-300"
+              style={{ boxShadow: '0 0 25px hsl(35 25% 60% / 0.15)' }}
+            >
               <h4 className="font-semibold text-accent">📍 Punktualność</h4>
               <p className="text-sm text-muted-foreground">
                 Przejazdy startują o czasie - bądź 15 minut wcześniej, żeby zdążyć!

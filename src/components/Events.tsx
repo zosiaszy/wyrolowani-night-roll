@@ -1,4 +1,4 @@
-import { ArrowUpRight, AlertTriangle, Lock, Sparkles, Zap, Star, Users, Facebook } from 'lucide-react';
+import { ArrowUpRight, AlertTriangle, Lock, Sparkles, Zap, Users, Facebook, Disc } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
@@ -19,8 +19,10 @@ export function Events() {
           </div>
 
           {/* Aktualności Card - Full Width */}
-          <div className="border border-border rounded-xl p-6 md:p-8 animate-fade-in-up bg-card/30 hover:border-primary/50 transition-all duration-300"
-               style={{ boxShadow: '0 0 20px hsl(var(--primary) / 0.1)' }}>
+          <div 
+            className="border border-primary/50 rounded-xl p-6 md:p-8 animate-fade-in-up bg-card/30 hover:border-primary transition-all duration-300"
+            style={{ boxShadow: '0 0 25px hsl(35 25% 60% / 0.2), inset 0 0 20px hsl(35 25% 60% / 0.03)' }}
+          >
             <div className="flex items-center gap-3 mb-6">
               <Badge variant="outline" className="border-primary/50 text-primary bg-primary/10 text-base px-4 py-1">
                 Aktualności
@@ -71,7 +73,7 @@ export function Events() {
                     Dokładną datę ogłosimy, jak tylko zamkniemy formalności z trasą i pozwoleniami, ale możemy to powiedzieć już teraz oficjalnie:
                   </p>
                   <p className="text-xl md:text-2xl font-semibold text-primary flex items-center gap-2">
-                    <Star className="h-5 w-5 text-primary fill-primary/30" />
+                    <Disc className="h-5 w-5 text-amber-400" />
                     Nightskating wraca do Łodzi.
                   </p>
                   <p className="text-foreground font-medium text-lg">
@@ -91,14 +93,17 @@ export function Events() {
                 </div>
                 <p className="text-sm text-muted-foreground mt-2 flex items-center gap-2">
                   <Users className="h-4 w-4 text-primary" />
-                  Śledź nas na bieżąco na <a href="https://www.facebook.com/wyrolowani" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline ml-1 inline-flex items-center gap-1"><Facebook className="h-4 w-4" />Facebooku</a>!
+                  Śledź nas na bieżąco na<a href="https://www.facebook.com/wyrolowani" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline inline-flex items-center gap-1"><Facebook className="h-4 w-4" />Facebooku</a>!
                 </p>
               </div>
             </div>
           </div>
 
           {/* Info Box */}
-          <div className="border border-border rounded-xl p-6 animate-fade-in bg-card/30">
+          <div 
+            className="border border-primary/50 rounded-xl p-6 animate-fade-in bg-card/30 hover:border-primary transition-all duration-300"
+            style={{ boxShadow: '0 0 25px hsl(35 25% 60% / 0.2), inset 0 0 20px hsl(35 25% 60% / 0.03)' }}
+          >
             <div className="flex items-start gap-4">
               <div className="w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center flex-shrink-0">
                 <AlertTriangle className="h-5 w-5 text-amber-500" />
